@@ -1,5 +1,3 @@
-windows.alert("Still in production !")
-
 /* ---- Custom Cursor ---- */
 const cur = document.getElementById('cur');
 const crng   = document.getElementById('crng');
