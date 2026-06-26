@@ -1,4 +1,4 @@
-alert("Still in production !")
+windows.alert("Still in production !")
 
 /* ---- Custom Cursor ---- */
 const cur = document.getElementById('cur');
