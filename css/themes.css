@@ -1,0 +1,35 @@
+/* =============================================
+       DESIGN TOKENS
+============================================= */
+:root {
+    --bg: #04050f;
+    --bg2: #05071a;
+    --surf: #080e28;
+    --surf2: #0b1235;
+    --bdr: #1a2560;
+    --bdr2: #0f1840;
+    --blue: #1f51ff;
+    --blue2: #1640d4;
+    --blue3: #0a1c5c;
+    --acc: #7eb3ff;
+    --acc2: #5a8fe0;
+    --red: #ff2244;
+    --amb: #ffaa00;
+    --grn: #00e5a0;
+    --pur: #a855f7;
+    --pnk: #ff6eb4;
+    --txt: #ccd8ff;
+    --txt2: #4a65cc;
+    --txt3: #1e2f66;
+    --mono: "Share Tech Mono", monospace;
+    --disp: "Orbitron", monospace;
+    --serif: "DM Serif Display", serif;
+    --body: "Rajdhani", sans-serif;
+    --gb: 0 0 24px rgba(31, 81, 255, 0.5), 0 0 60px rgba(31, 81, 255, 0.15);
+    --ga: 0 0 16px rgba(126, 179, 255, 0.4);
+    --gg: 0 0 16px rgba(0, 229, 160, 0.4);
+    --gam: 0 0 16px rgba(255, 170, 0, 0.4);
+    --gr: 0 0 16px rgba(255, 34, 68, 0.4);
+    --gp: 0 0 16px rgba(168, 85, 247, 0.5);
+    --tr: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
