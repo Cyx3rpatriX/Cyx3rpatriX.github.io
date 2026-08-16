@@ -16,6 +16,8 @@ body {
 }
 
 ::selection { background: var(--blue); color: #fff; }
+
+a {text-decoration: none; color: var(--wht);}
     
     
     
