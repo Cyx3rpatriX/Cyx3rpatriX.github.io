@@ -2,7 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <metar name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyXLab is a structured learning ecosystem for programming, cybersecurity, AI, science, engineering, mathematics, and technology.">
+  <meta name="author" content="David Patrick (Cyx3rpatriX)">
+  <meta name="robots" content="index, follow">
+  <!-- BRAND / BROWSER -->
+  <meta name="application-name" content="CyXLab">
+  <meta name="theme-color" content="#1F51FF">
+  <!-- CANONICAL URL -->
+  <link rel="canonical" href="https://cyxlab.io/">
+  <!-- OPEN GRAPH — SOCIAL SHARING -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CyXLab">
+  <meta property="og:title" content="CyXLab — Learn, Build & Master Technology">
+  <meta property="og:description" content="A structured learning ecosystem for programming, cybersecurity, AI, science, engineering, mathematics, and technology.">
+  <meta property="og:url" content="https://cyxlab.io/">
+  <meta property="og:image" content="./assets/images/cyx-og-image.png">
+  <meta property="og:image:alt" content="CyXLab — Learn, Build & Master Technology">
+  <!-- X / TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CyXLab — Learn, Build & Master Technology">
+  <meta name="twitter:description" content="A structured learning ecosystem for programming, cybersecurity, AI, science, engineering, mathematics, and technology.">
+  <meta name="twitter:image" content="./assets/images/cyx-og-image.png">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+  <!--
+    OPTIONAL: WEB APP / PWA
+    Only add manifest.json when you actually
+    create a PWA manifest. 
+  -->
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!--
+    OPTIONAL: JSON-LD STRUCTURED DATA
+    Recommended later when we build your
+    proper SEO/structured-data layer. 
+  -->      
   <title>CyXLab — Learn, Master and Build real skills.</title>
   <link rel="stylesheet" href="./css/themes.css">
   <link rel="stylesheet" href="./css/base.css">
@@ -103,6 +139,22 @@
     .hero-headline .accent-cyan {
         color: var(--acc);
         text-shadow: var(--ga);
+    }
+    
+    #hero-changing-text {
+        display: inline-block;
+        /* Keeps the layout from jumping when text changes */
+        min-width: 320px;
+        transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        filter 0.35s ease;
+    }
+
+    #hero-changing-text.is-changing {
+        opacity: 0;
+        transform: translateY(-8px);
+        filter: blur(4px);
     }
 
     .hero-typewriter {
@@ -719,6 +771,12 @@
         background: rgba(126,179,255,0.06); 
     }
     
+    .post-cat.guide  { 
+        color: var(--wht);  
+        border-color: rgba(255,255,255,0.3); 
+        background: rgba(255,255,255,0.06); 
+    }
+    
     .post-date {
         font-family: var(--mono);
         font-size: 0.6rem;
@@ -1082,8 +1140,8 @@
         <a href="#hero">Home</a>
         <a href="#roadmap-preview">Roadmap</a>
         <a href="#latest-posts">Blog</a>
-        <a href="#">About</a>
-        <a href="#" style="color:var(--acc)">Login</a>
+        <a href="about.html">About</a>
+        <a href="under_production.html" style="color:var(--acc)">Login</a>
         <a href="#join" style="color:var(--blue)">Sign Up</a>
     </div>
 
@@ -1098,12 +1156,12 @@
             <li><a href="#hero" class="act">home</a></li>
             <li><a href="#roadmap-preview">roadmap</a></li>
             <li><a href="#latest-posts">blog</a></li>
-            <li><a href="#">about</a></li>
+            <li><a href="about.html">about</a></li>
         </ul>
         
         <div class="nauth">
-            <button class="nbg">Login</button>
-            <button class="nbp">Sign Up</button>
+            <a href="under_production.html"><button class="nbg">Login</button></a>
+            <a href="under_production.html"><button class="nbp">Sign Up</button></a>
         </div>
         <button id="mclose">✕</button>
         <button class="nhb" id="hamburger" aria-label="Menu">
@@ -1120,7 +1178,7 @@
                     <span class="dot"></span>
                     WELCOME TO THE GRID
                 </div>
-                <h1 class="hero-headline glitch" data-text="HACK THE SYSTEM.MASTER THE CRAFT.">HACK THE SYSTEM.<br><span class="accent-green">MASTER</span> THE <span class="accent-cyan">CRAFT.</span></h1>
+                <h1 class="hero-headline glitch" data-text="HACK THE SYSTEM. MASTER THE CRAFT."><span id="hero-changing-text">HACK THE SYSTEM.</span><br><span class="accent-green">MASTER</span> THE <span class="accent-cyan">CRAFT.</span></h1>
                 <p class="hero-typewriter">
                     <span class="prefix">root@cyxlab:~$ </span>
                     <span id="typewriter-text"></span>
@@ -1200,7 +1258,7 @@
             <div class="ticker-item"><span class="tag-badge green">BLOG</span> AI Fuzzing with LLM Agents <span class="ticker-sep">///</span></div>
             <div class="ticker-item"><span class="tag-badge cyan">TOOL</span> Metasploit Module Development <span class="ticker-sep">///</span></div>
             <div class="ticker-item"><span class="tag-badge red">WALKTHROUGH</span> Privilege Escalation — Linux <span class="ticker-sep">///</span></div>
-            <div class="ticker-item"><span class="tag-badge amber">CALCULUS</span> Gradient Descent for ML Hacking <span class="ticker-sep">///</span></div>
+           <!-- <div class="ticker-item"><span class="tag-badge amber">CALCULUS</span> Gradient Descent for ML Hacking <span class="ticker-sep">///</span></div> -->
         </div>
     </div>
 
@@ -1213,6 +1271,7 @@
                 <p class="sec-sub">Structured paths from zero to exploitation. Each track builds on the last.</p>
             </div>
             <div class="categories-grid reveal">
+              <a href="under_production.html">
                 <div class="cat-card" style="--cat-accent:var(--acc);--cat-glow:rgba(126,179,255,0.06)">
                     <div class="cat-icon">⬡</div>
                     <div class="cat-title">WEB EXPLOITATION</div>
@@ -1220,6 +1279,8 @@
                     <div class="cat-count">42 LESSONS · 18 LABS</div>
                     <div class="cat-arrow">↗</div>
                 </div>
+              </a>
+              <a href="under_production.html">
                 <div class="cat-card" style="--cat-accent:var(--blue);--cat-glow:rgba(31,81,255,0.07)">
                     <div class="cat-icon">⬡</div>
                     <div class="cat-title">NETWORK HACKING</div>
@@ -1227,6 +1288,8 @@
                     <div class="cat-count">35 LESSONS · 12 LABS</div>
                     <div class="cat-arrow">↗</div>
                 </div>
+              </a>
+              <a href="under_production.html">
                 <div class="cat-card" style="--cat-accent:var(--amb);--cat-glow:rgba(255,170,0,0.04)">
                     <div class="cat-icon">⬡</div>
                     <div class="cat-title">REVERSE ENGINEERING</div>
@@ -1234,6 +1297,8 @@
                     <div class="cat-count">28 LESSONS · 9 LABS</div>
                     <div class="cat-arrow">↗</div>
                 </div>
+              </a>
+              <a href="under_production.html">
                 <div class="cat-card" style="--cat-accent:var(--red);--cat-glow:rgba(255,34,68,0.04)">
                     <div class="cat-icon">⬡</div>
                     <div class="cat-title">EXPLOIT DEVELOPMENT</div>
@@ -1241,6 +1306,8 @@
                     <div class="cat-count">24 LESSONS · 8 LABS</div>
                     <div class="cat-arrow">↗</div>
                 </div>
+              </a>
+              <a href="under_production.html">
                 <div class="cat-card" style="--cat-accent:var(--acc);--cat-glow:rgba(126,179,255,0.05)">
                     <div class="cat-icon">⬡</div>
                     <div class="cat-title">AI / ML SECURITY</div>
@@ -1248,6 +1315,8 @@
                     <div class="cat-count">20 LESSONS · 6 LABS</div>
                     <div class="cat-arrow">↗</div>
                 </div>
+              </a>
+              <a href="under_production.html">
                 <div class="cat-card" style="--cat-accent:var(--blue);--cat-glow:rgba(31,81,255,0.06)">
                     <div class="cat-icon">⬡</div>
                     <div class="cat-title">CTF &amp; WRITEUPS</div>
@@ -1255,6 +1324,7 @@
                     <div class="cat-count">80+ WRITEUPS</div>
                     <div class="cat-arrow">↗</div>
                 </div>
+              </a>
             </div>
         </div>
     </section>
@@ -1269,7 +1339,7 @@
                         <h2 class="sec-title">Your Path to<br>Exploitation</h2>
                         <p class="sec-sub">A curated journey. No guesswork — just a clear progression from fundamentals to advanced techniques.</p>
                     </div>
-                    <a href="#" class="btn-cta" style="font-size:0.78rem;padding:0.75rem 1.75rem">
+                    <a href="roadmap.html" class="btn-cta" style="font-size:0.78rem;padding:0.75rem 1.75rem">
           ▶ EXPLORE FULL ROADMAP
                     </a>
                 </div>
@@ -1355,28 +1425,30 @@
                     <div class="sec-tag">03 / LATEST</div>
                     <h2 class="sec-title">From The Lab</h2>
                 </div>
-                <a href="#" class="link-arrow">VIEW ALL POSTS →</a>
+                <a href="blog.html" class="link-arrow">VIEW ALL POSTS →</a>
             </div>
 
             <div class="posts-grid reveal">
-                <!-- Featured post -->
+              <!-- Featured post -->
+              <a href="under_production.html">
                 <div class="post-card featured">
                     <div class="post-meta">
-                        <span class="post-cat web">WEB SECURITY</span>
+                        <span class="post-cat guide">GUIDE</span>
                         <span class="post-date">MAY 29, 2026</span>
                     </div>
-                    <div class="post-title">Chaining SSRF + XXE to Achieve Full Internal Cloud Metadata Access</div>
-                    <p class="post-excerpt">A deep-dive into how a seemingly innocuous XML parser configuration combined with an unchecked redirect endpoint opens the door to full AWS metadata exfiltration. Step-by-step PoC included.</p>
+                    <div class="post-title">The Zero-to-Mastery Problem: Why Most People Never Truly Learn</div>
+                    <p class="post-excerpt">Information is everywhere. Understanding isn't. Discover why most people never move beyond consuming knowledge and what it really takes to transform information into understanding, capability, and mastery.</p>
                     <div class="post-footer">
                         <div class="post-author">
-                            <div class="author-avatar">HP</div>
-                            <span class="author-name">cyxlab</span>
+                            <div class="author-avatar">CP</div>
+                            <span class="author-name">Cyx3rpatriX</span>
                         </div>
                         <span class="read-time">12 MIN READ</span>
                     </div>
                 </div>
-
-                <div class="post-card">
+              </a>
+                
+                <!--  <div class="post-card">
                     <div class="post-meta">
                         <span class="post-cat ctf">CTF</span>
                         <span class="post-date">MAY 27, 2026</span>
@@ -1436,6 +1508,7 @@
                         </div>
                         <span class="read-time">6 MIN READ</span>
                     </div>
+                     -->
                 </div>
             </div>
         </div>
@@ -1449,7 +1522,7 @@
                     <div class="sec-tag">04 / TOOLKIT</div>
                     <h2 class="sec-title">The Arsenal</h2>
                 </div>
-                <a href="#" class="link-arrow">ALL TOOL GUIDES →</a>
+                <a href="under_production.html" class="link-arrow">ALL TOOL GUIDES →</a>
             </div>
 
             <div class="tools-grid reveal">
@@ -1502,7 +1575,7 @@
         <div class="join-bg"></div>
         <div class="container">
             <div class="join-content reveal">
-                <div class="join-badge">FREE ACCESS — NO CREDIT CARD</div>
+                <!-- <div class="join-badge">FREE ACCESS — NO CREDIT CARD</div> -->
                 <h2 class="join-title">
                     Ready To <span class="hl">Level Up</span><br>Your Skills?
                 </h2>
@@ -1532,22 +1605,22 @@
                         root@cyxlab:~# knowledge --is-power
                     </p>
                     <div class="footer-socials">
-                        <a href="#" class="social-btn" title="Twitter">𝕏</a>
-                        <a href="#" class="social-btn" title="GitHub">gh</a>
-                        <a href="#" class="social-btn" title="Discord">dc</a>
-                        <a href="#" class="social-btn" title="YouTube">yt</a>
+                        <a href="" class="social-btn" title="Twitter">𝕏</a>
+                        <a href="https://github.com/Cyx3rpatriX" class="social-btn" title="GitHub">gh</a>
+                        <a href="" class="social-btn" title="Discord">dc</a>
+                        <a href="" class="social-btn" title="YouTube">yt</a>
                     </div>
                 </div>
 
                 <div>
                     <div class="footer-heading">Learn</div>
                     <ul class="footer-links">                                                                                            
-                        <li><a href="#">Roadmap</a></li>
-                        <li><a href="#">Web Exploitation</a></li>
-                        <li><a href="#">Network Hacking</a></li>
-                        <li><a href="#">Reverse Engineering</a></li>
-                        <li><a href="#">AI/ML Security</a></li>                                                                        
-                        <li><a href="#">CTF Writeups</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="under_production.html">Web Exploitation</a></li>
+                        <li><a href="under_production.html">Network Hacking</a></li>
+                        <li><a href="under_production.html">Reverse Engineering</a></li>
+                        <li><a href="under_production.html">AI/ML Security</a></li>                                                                        
+                        <li><a href="under_production.html">CTF Writeups</a></li>
                     </ul>
                 </div>
                 
@@ -1555,23 +1628,22 @@
                 <div>
                     <div class="footer-heading">Platform</div>
                     <ul class="footer-links">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Tool Guides</a></li>
-                        <li><a href="#">Walkthroughs</a></li>
-                        <li><a href="#">Calculus for Hackers</a></li>
-                        <li><a href="#">Tips &amp; Tricks</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="under_production.html">Tool Guides</a></li>
+                        <li><a href="under_production.html">Walkthroughs</a></li>
+                        <li><a href="under_production.html">Tips &amp; Tricks</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <div class="footer-heading">Account</div>
                     <ul class="footer-links">
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Progress Tracker</a></li>
-                        <li><a href="#">Bookmarks</a></li>
-                        <li><a href="#">Community</a></li>                                            
+                        <li><a href="under_production.html">Sign Up</a></li>
+                        <li><a href="under_production.html">Login</a></li>
+                        <li><a href="under_production.html">Progress Tracker</a></li>
+                        <li><a href="under_production.html">Bookmarks</a></li>
+                        <li><a href="under_production.html">Community</a></li>                                            
                     </ul>
                 </div>
             </div>
@@ -1581,9 +1653,9 @@
                         © 2026 CyXLab — FOR EDUCATIONAL PURPOSES ONLY // HACK, BUILD & CREATE ETHICALLY, ALWAYS
                 </div>
                 <div class="footer-legal">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Disclaimer</a>
+                    <a href="">Privacy</a>
+                    <a href="">Terms</a>
+                    <a href="">Disclaimer</a>
                 </div>
             </div>
         </div>
@@ -1592,11 +1664,42 @@
     <!-- ────────────── SCRIPTS ────────────── -->
     <script src="./js/index.js"></script>
     <script>
+        /* --- Hero text changing ---- */
+        const heroText = document.getElementById("hero-changing-text");
+        const hero_phrases = [
+          "HACK THE SYSTEM.",
+          "BUILD THE FUTURE.",
+          "ENGINEER THE POSSIBLE.",
+          "CREATE. EXPERIMENT. BUILD.",
+          "EXPLORE THE UNKNOWN.",
+          "SOLVE HARD PROBLEMS.",
+          "TURN KNOWLEDGE INTO SYSTEMS."
+      ];
+
+      let currentIndex = 0;
+
+      setInterval(() => {
+          // Fade / glitch out
+          heroText.classList.add("is-changing");
+          setTimeout(() => {
+              // Move to next phrase
+              currentIndex = (currentIndex + 1) % hero_phrases.length;
+              heroText.textContent = hero_phrases[currentIndex];
+              // Bring new hero phrase in
+              heroText.classList.remove("is-changing");
+          }, 350);
+      }, 3500);
+      
+      
         /* ---- Typewriter ---- */
         const phrases = [
             'learn ethical hacking from scratch...',
             'master web exploitation techniques...',
             'understand reverse engineering...',
+            'build, create, engineer...',
+            'learn IoT...',
+            'learn programming...',
+            'learn information gathering...',
             'build your exploit development skills...',
             'hack the box. pwn the lab. level up.',
         ];
