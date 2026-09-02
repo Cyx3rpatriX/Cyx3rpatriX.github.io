@@ -69,7 +69,13 @@ mobileNav.querySelectorAll('a').forEach(a => {
     mclose.style.display="none";
   });
 });
-        
-        
-        
-     
+
+
+/* ————— img path manager for the entire site ————— */
+const CURRENT_DOMAIN = "https://cyx3rpatrix.github.io/"
+
+// Automatically updates all images on page load
+document.querySelectorAll('.dynamic-img').forEach(img => {
+  const relativePath = img.getAttribute('data-src');
+  img.src = CURRENT_DOMAIN + relativePath;
+})
