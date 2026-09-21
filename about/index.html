@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore CyX_9D — a cyber-inspired learning ecosystem built to help you understand, build, experiment, and master technology, science, engineering, and cybersecurity.">
+  <meta name="author" content="David Patrick (Cyx3rpatriX)">
+  <meta name="robots" content="index, follow">
+  <!-- BRAND / BROWSER -->
+  <meta name="application-name" content="CyX_9D">
+  <meta name="theme-color" content="#1F51FF">
+  <!-- CANONICAL URL -->
+  <link rel="canonical" href="https://cyx3rpatrix.github.io/about/">
+  <!-- OPEN GRAPH — SOCIAL SHARING -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CyX_9D">
+  <meta property="og:title" content="CyX_9D — About">
+  <meta property="og:description" content="Explore CyX_9D — a cyber-inspired learning ecosystem built to help you understand, build, experiment, and master technology, science, engineering, and cybersecurity.">
+  <meta property="og:url" content="https://cyx3rpatrix.github.io/about/">
+  <meta property="og:image" content="https://cyx3rpatrix.github.io/assets/images/cyx-og-image.png">
+  <meta property="og:image:alt" content="CyX_9D — Learn, Build & Master Technology">
+  <!-- X / TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CyX_9D — Learn, Build & Master Technology">
+  <meta name="twitter:description" content="Explore CyX_9D — a cyber-inspired learning ecosystem built to help you understand, build, experiment, and master technology, science, engineering, and cybersecurity.">
+  <meta name="twitter:image" content="https://cyx3rpatrix.github.io/assets/images/cyx-og-image.png">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="https://cyx3rpatrix.github.io/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="https://cyx3rpatrix.github.io/assets/images/favicon.png">
+  <!--
+    OPTIONAL: WEB APP / PWA
+    Only add manifest.json when you actually
+    create a PWA manifest.
+  -->
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!--
+    OPTIONAL: JSON-LD STRUCTURED DATA
+    Recommended later when we build your
+    proper SEO/structured-data layer.
+  -->
+  <title>CyX_9D — Blog</title>
+  <link rel="stylesheet" href="../assets/css/themes.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+  <style>    
+    /* ── CINEMATIC HERO ────────────────────── */
+    .hero{
+      min-height: 100vh;
+      display: flex; 
+      flex-direction: column; 
+      justify-content: flex-end;
+      padding: 0 0 0;
+      position: relative; 
+      overflow: hidden;
+    }
+    
+    /* animated grid */
+    .hero-grid{
+      position:absolute;
+      inset:0;
+      background-image: linear-gradient(
+        rgba(31,81,255,.03) 1px,
+        transparent 1px),
+        linear-gradient(
+        90deg,
+        rgba(31,81,255,.03) 1px,
+        transparent 1px);
+      background-size:80px 80px;
+      animation:gridDrift 20s linear infinite;
+    }
+    
+    @keyframes gridDrift{0%{background-position:0 0}100%{background-position:80px 80px}}
+
+    /* radial glow */
+    .hero-glow{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(ellipse 70% 60% at 15% 50%,rgba(31,81,255,.14) 0%,transparent 65%),
+        radial-gradient(ellipse 40% 40% at 85% 30%,rgba(126,179,255,.06) 0%,transparent 60%),
+        radial-gradient(ellipse 50% 80% at 50% 100%,rgba(31,81,255,.08) 0%,transparent 60%);
+    }
+
+    /* big diagonal text */
+    .hero-bg-text{
+      position:absolute;
+      bottom:-0.15em; 
+      left:-0.05em;
+      font-family:var(--disp);
+      font-size: clamp(8rem,18vw,22rem);
+      font-weight:900;
+      color:transparent;
+      -webkit-text-stroke: 1px rgba(31,81,255,.08);
+      letter-spacing:-.03em;
+      line-height:1;
+      white-space:nowrap;
+      pointer-events:none;
+      user-select:none;
+      z-index:0;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:1200px;
+      margin:0 auto;
+      width:100%;
+      padding:9rem 2rem 5rem;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:4rem;
+      align-items:end;
+    }
+    
+    .hero-left{}
+    .hero-eyebrow { 
+      font-family:var(--mono);
+      font-size:.7rem; 
+      color:var(--blue);
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+      margin-bottom:1.5rem; 
+    }
+    
+    .hero-eyebrow .pulse{
+      width:8px;height:8px;border-radius:50%;background:var(--blue);
+      animation:pulse 2s ease infinite;
+    }
+    
+    .hero-h1{
+      font-family:var(--serif);
+      font-size:clamp(3rem,7vw,6.5rem);
+      font-weight:400;color:var(--txt);
+      line-height:1.0;letter-spacing:-.02em;
+      margin-bottom:2rem;
+    }
+    
+    .hero-h1 em{color:var(--blue);text-shadow:var(--gb);font-style:italic}
+    .hero-h1 .line2{display:block;color:var(--acc)}
+
+    .hero-manifesto{
+      font-family:var(--mono);font-size:.82rem;
+      color:var(--txt2);line-height:2;
+      max-width:480px;
+      border-left:2px solid var(--blue3);
+      padding-left:1.25rem;
+    }
+    
+    .hero-manifesto span{color:var(--blue)}
+
+    .hero-right{
+      display:flex;flex-direction:column;gap:1px;
+      background:var(--bdr);border:1px solid var(--bdr);
+      align-self:end;
+    }
+    
+    #hero-changing-text {
+        display: inline-block;
+        /* Keeps the layout from jumping when text changes */
+        min-width: 320px;
+        transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        filter 0.35s ease;
+    }
+
+    #hero-changing-text.is-changing {
+        opacity: 0;
+        transform: translateY(-8px);
+        filter: blur(4px);
+    }
+    
+    .stat-cell {
+      background:var(--bg2);
+      padding:1.5rem 1.75rem;
+      display:flex;
+      flex-direction:column;
+      gap:.3rem;
+      transition:var(--tr);
+      cursor:none;
+    }
+    
+    .stat-cell:hover {background:var(--surf)}
+    .stat-n{
+      font-family:var(--disp);
+      font-size:2.4rem;
+      font-weight:900;
+      color:var(--blue);
+      text-shadow:var(--gb);
+      line-height:1;
+    }
+    
+    .stat-l {
+      font-family:var(--mono);
+      font-size:.62rem;
+      color:var(--txt3);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-top:.1rem
+    }
+    
+    .stat-d {
+      font-family:var(--mono);
+      font-size:.68rem;
+      color:var(--txt2);
+      margin-top:.15rem
+    }
+
+    /* bottom bar */
+    .hero-bar {
+      position:relative;
+      z-index:2;
+      border-top:1px solid var(--bdr);
+      background:rgba(4,5,15,.7);
+      backdrop-filter:blur(12px);
+    }
+    
+    .hero-bar-inner {
+      max-width:1200px;
+      margin:0 auto;
+      padding:.9rem 2rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:1rem;
+    }
+    
+    .hb-tagn{
+      font-family:var(--mono);
+      font-size:.65rem;
+      color:var(--txt3);
+      letter-spacing:.1em
+    }
+    
+    .hb-tag span {color:var(--blue)}
+    .scroll-hint {
+      display:flex;
+      align-items:center;
+      gap:.5rem;
+      font-family:var(--mono);
+      font-size:.62rem;
+      color:var(--txt3);
+      letter-spacing:.1em;
+      cursor:none;
+      animation:bounce .8s ease infinite alternate;
+    }
+    
+    @keyframes bounce {
+      from {
+        transform:translateY(0)
+      }
+      to {
+        transform:translateY(4px)
+      }
+    }
+
+    /* ── SECTION COMMONS ────────────────────────────── */
+    .sec-label{
+      font-family:var(--mono);font-size:.66rem;
+      color:var(--blue);letter-spacing:.18em;text-transform:uppercase;
+      display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;
+    }
+    .sec-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--blue3)}
+    .sec-title{
+      font-family:var(--serif);
+      font-size:clamp(2rem,4vw,3.2rem);
+      font-weight:400;color:var(--txt);
+      line-height:1.1;letter-spacing:-.01em;
+      margin-bottom:1rem;
+    }
+    .sec-title em{color:var(--blue);font-style:italic}
+    .sec-sub{
+      font-family:var(--body);font-size:1rem;
+      color:var(--txt2);max-width:560px;line-height:1.7;
+    }
+
+    /* ── ORIGIN STORY ───────────────────────────────── */
+    #origin{padding:7rem 0;border-bottom:1px solid var(--bdr)}
+    .origin-grid{
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:0;background:var(--bdr);border:1px solid var(--bdr);
+    }
+    .origin-text{
+      padding:3.5rem;background:var(--bg2);
+      border-right:1px solid var(--bdr);
+    }
+    .origin-text p{
+      font-family:var(--body);font-size:1rem;
+      color:var(--txt2);line-height:1.85;margin-bottom:1.25rem;
+    }
+    .origin-text p strong{color:var(--txt)}
+    .origin-text p:last-child{margin-bottom:0}
+    .origin-terminal{
+      padding:2rem;background:var(--surf);
+      display:flex;flex-direction:column;justify-content:center;
+    }
+    .term-bar{
+      display:flex;align-items:center;gap:.4rem;
+      padding:.5rem .75rem;background:var(--surf2);
+      border-bottom:1px solid var(--bdr);margin:-2rem -2rem 1.5rem;
+    }
+    .t-dot{width:9px;height:9px;border-radius:50%}
+    .t-r{background:#ff5f56}.t-y{background:#febc2e}.t-g{background:#28c840}
+    .t-title{font-family:var(--mono);font-size:.6rem;color:var(--txt3);margin-left:auto;letter-spacing:.06em}
+    .t-line{font-family:var(--mono);font-size:.72rem;line-height:2;color:var(--txt2);display:flex;gap:.5rem}
+    .t-pr{color:var(--blue);flex-shrink:0}
+    .t-cmd{color:var(--txt)}
+    .t-out{color:var(--txt2);padding-left:1.2rem;display:block}
+    .t-grn{color:var(--grn)}
+    .t-acc{color:var(--acc)}
+    .t-amb{color:var(--amb)}
+    .t-blink{display:inline-block;width:7px;height:.85em;background:var(--blue);vertical-align:text-bottom;animation:blink 1s step-end infinite}
+
+    /* ── MEANING ───────────────────────────────── */
+    #meaning{padding:7rem 0;border-bottom:1px solid var(--bdr)}
+    .meaning-grid{
+      display:grid;gap:0;background:var(--bdr);border:1px solid var(--bdr);
+    }
+    .meaning-text{
+      padding:3.5rem;background:var(--bg2);
+      border-right:1px solid var(--bdr);
+    }
+    .meaning-text p{
+      font-family:var(--body);font-size:1rem;
+      color:var(--txt2);line-height:1.85;margin-bottom:1.25rem;
+    }
+    .meaning-text p strong{color:var(--txt)}
+    .meaning-text p:last-child{margin-bottom:0}
+    
+    /* ── MISSION / VALUES ───────────────────────────── */
+    #mission{padding:7rem 0;border-bottom:1px solid var(--bdr)}
+    .mission-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .values-grid{display:flex;flex-direction:column;gap:1px;background:var(--bdr);border:1px solid var(--bdr)}
+    .value-card{
+      background:var(--bg2);padding:1.75rem;
+      display:flex;gap:1.25rem;align-items:flex-start;
+      transition:var(--tr);cursor:none;position:relative;overflow:hidden;
+    }
+    .value-card::before{
+      content:'';position:absolute;left:0;top:0;bottom:0;
+      width:0;background:var(--vc-col,var(--blue));
+      opacity:.1;transition:width .4s ease;
+    }
+    .value-card:hover::before{width:100%}
+    .value-card:hover{background:var(--surf)}
+    .value-icon{
+      width:42px;height:42px;border:1px solid var(--bdr);
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.1rem;flex-shrink:0;transition:var(--tr);
+      color:var(--vc-col,var(--blue));
+    }
+    .value-card:hover .value-icon{border-color:var(--vc-col,var(--blue));box-shadow:0 0 12px rgba(31,81,255,.2)}
+    .value-body{}
+    .value-title{font-family:var(--disp);font-size:.78rem;font-weight:700;color:var(--txt);letter-spacing:.06em;margin-bottom:.35rem}
+    .value-desc{font-family:var(--body);font-size:.85rem;color:var(--txt2);line-height:1.6}
+
+    /* ── TEAM ───────────────────────────────────────── */
+    #team{padding:7rem 0;border-bottom:1px solid var(--bdr)}
+    .team-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:1px;background:var(--bdr);border:1px solid var(--bdr);
+      margin-top:3rem;
+    }
+    .team-card{
+      background:var(--bg2);padding:2rem 1.75rem;
+      transition:var(--tr);cursor:none;position:relative;overflow:hidden;
+      display:flex;flex-direction:column;gap:1rem;
+    }
+    .team-card::after{
+      content:'';position:absolute;bottom:0;left:0;right:0;
+      height:2px;background:var(--tc-col,var(--blue));
+      transform:scaleX(0);transform-origin:left;transition:transform .4s ease;
+    }
+    .team-card:hover::after{transform:scaleX(1)}
+    .team-card:hover{background:var(--surf)}
+
+    .tc-avatar{
+      width:64px;height:64px;border-radius:50%;
+      background:var(--blue3);border:2px solid var(--bdr);
+      display:flex;align-items:center;justify-content:center;
+      font-family:var(--mono);font-size:1rem;
+      color:var(--tc-col,var(--blue));font-weight:bold;
+      transition:var(--tr);
+    }
+    .team-card:hover .tc-avatar{border-color:var(--tc-col,var(--blue));box-shadow:0 0 16px rgba(31,81,255,.3)}
+    .tc-name{font-family:var(--disp);font-size:.9rem;font-weight:700;color:var(--txt);letter-spacing:.06em}
+    .tc-handle{font-family:var(--mono);font-size:.65rem;color:var(--tc-col,var(--blue));letter-spacing:.06em;margin-top:.1rem}
+    .tc-role{font-family:var(--mono);font-size:.62rem;color:var(--txt3);letter-spacing:.08em;text-transform:uppercase;margin-top:.1rem}
+    .tc-bio{font-family:var(--body);font-size:.85rem;color:var(--txt2);line-height:1.6}
+    .tc-skills{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.25rem}
+    .tc-skill{
+      font-family:var(--mono);font-size:.55rem;
+      padding:.1rem .4rem;border:1px solid var(--bdr);
+      color:var(--txt3);letter-spacing:.06em;text-transform:uppercase;
+      transition:var(--tr);
+    }
+    .team-card:hover .tc-skill{border-color:var(--blue3);color:var(--txt2)}
+    .tc-links{display:flex;gap:.4rem;margin-top:auto}
+    .tc-link{
+      font-family:var(--mono);font-size:.58rem;
+      color:var(--txt3);border:1px solid var(--bdr);
+      padding:.2rem .5rem;text-decoration:none;
+      letter-spacing:.06em;transition:var(--tr);cursor:none;
+    }
+    .tc-link:hover{color:var(--acc);border-color:var(--acc)}
+
+    /* ── TIMELINE ───────────────────────────────────── */
+    #timeline{padding:7rem 0;border-bottom:1px solid var(--bdr);background:var(--bg2)}
+    .tl-inner{
+      display:grid;grid-template-columns:240px 1fr;
+      gap:0;align-items:start;
+    }
+    .tl-header{position:sticky;top:90px;padding-right:3rem}
+    .tl-items{display:flex;flex-direction:column;gap:0}
+    .tl-item{
+      display:flex;gap:2rem;
+      padding:2rem 0;
+      border-bottom:1px solid var(--bdr2);
+      transition:var(--tr);cursor:none;
+    }
+    .tl-item:last-child{border-bottom:none}
+    .tl-item:hover .tl-dot{background:var(--blue);box-shadow:0 0 12px rgba(31,81,255,.5)}
+    .tl-left{display:flex;flex-direction:column;align-items:center;gap:0;width:40px;flex-shrink:0}
+    .tl-dot{
+      width:14px;height:14px;border-radius:50%;
+      border:2px solid var(--bdr);background:var(--bg2);
+      transition:var(--tr);flex-shrink:0;z-index:1;
+    }
+    .tl-dot.active{background:var(--blue);border-color:var(--blue);box-shadow:0 0 12px rgba(31,81,255,.5)}
+    .tl-line{width:1px;flex:1;background:var(--bdr);margin-top:4px;min-height:40px}
+    .tl-content{}
+    .tl-year{font-family:var(--disp);font-size:.72rem;font-weight:700;color:var(--blue);letter-spacing:.1em;margin-bottom:.4rem}
+    .tl-event{font-family:var(--disp);font-size:1rem;font-weight:700;color:var(--txt);letter-spacing:.04em;margin-bottom:.5rem}
+    .tl-desc{font-family:var(--body);font-size:.9rem;color:var(--txt2);line-height:1.65}
+    .tl-badge{
+      display:inline-block;font-family:var(--mono);font-size:.58rem;
+      padding:.12rem .45rem;border:1px solid;letter-spacing:.08em;text-transform:uppercase;
+      margin-bottom:.5rem;
+    }
+
+    /* ── TOOLS & STACK ──────────────────────────────── */
+    #stack{padding:7rem 0;border-bottom:1px solid var(--bdr)}
+    .stack-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-bottom:4rem}
+    .stack-grid{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      gap:1px;background:var(--bdr);border:1px solid var(--bdr);
+    }
+    .stack-item{
+      background:var(--bg2);padding:1.5rem 1.25rem;
+      display:flex;flex-direction:column;gap:.5rem;
+      transition:var(--tr);cursor:none;align-items:center;text-align:center;
+    }
+    .stack-item:hover{background:var(--surf)}
+    .stack-icon{font-size:1.6rem;margin-bottom:.25rem}
+    .stack-name{font-family:var(--mono);font-size:.72rem;color:var(--acc);letter-spacing:.06em}
+    .stack-cat{font-family:var(--mono);font-size:.56rem;color:var(--txt3);letter-spacing:.08em;text-transform:uppercase}
+
+    /* ── COMMUNITY / JOIN ───────────────────────────── */
+    #community{padding:7rem 0;border-bottom:1px solid var(--bdr)}
+    .community-wrap{position:relative;overflow:hidden}
+    .community-bg{
+      position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 60% 80% at 50% 50%,rgba(31,81,255,.07) 0%,transparent 70%),
+        repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(31,81,255,.02) 40px);
+      pointer-events:none;
+    }
+    .community-inner{
+      position:relative;z-index:1;
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:4rem;align-items:center;
+      padding:5rem 0;
+    }
+    .comm-left{}
+    .comm-channels{display:flex;flex-direction:column;gap:1px;background:var(--bdr);border:1px solid var(--bdr)}
+    .ch-card{
+      background:var(--bg2);padding:1.5rem;
+      display:flex;align-items:center;gap:1.25rem;
+      text-decoration:none;cursor:none;transition:var(--tr);
+    }
+    .ch-card:hover{background:var(--surf)}
+    .ch-icon{
+      width:44px;height:44px;border:1px solid var(--bdr);
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.2rem;flex-shrink:0;transition:var(--tr);
+      color:var(--ch-col,var(--blue));
+    }
+    .ch-card:hover .ch-icon{border-color:var(--ch-col,var(--blue));box-shadow:0 0 12px rgba(31,81,255,.2)}
+    .ch-info{}
+    .ch-name{font-family:var(--disp);font-size:.78rem;font-weight:700;color:var(--txt);letter-spacing:.06em;transition:var(--tr)}
+    .ch-card:hover .ch-name{color:var(--acc)}
+    .ch-desc{font-family:var(--mono);font-size:.62rem;color:var(--txt3);margin-top:.2rem;letter-spacing:.04em}
+    .ch-count{font-family:var(--mono);font-size:.6rem;color:var(--ch-col,var(--blue));margin-left:auto;white-space:nowrap}
+    .comm-right{}
+    .join-box{background:var(--surf);border:1px solid var(--bdr);padding:2.5rem;position:relative}
+    .join-box::before{content:'// JOIN_CYX_9D.sh';font-family:var(--mono);font-size:.6rem;color:var(--blue);letter-spacing:.1em;position:absolute;top:0;left:1.2rem;background:var(--surf);padding:0 .5rem;transform:translateY(-50%)}
+    .join-box h3{font-family:var(--serif);font-size:1.6rem;font-weight:400;color:var(--txt);margin-bottom:.75rem;line-height:1.2}
+    .join-box h3 em{color:var(--blue);font-style:italic}
+    .join-box p{font-family:var(--mono);font-size:.72rem;color:var(--txt2);line-height:1.8;margin-bottom:1.75rem;letter-spacing:.02em}
+    .join-form{display:flex;gap:0}
+    .join-input{flex:1;background:var(--bg2);border:1px solid var(--bdr);border-right:none;padding:.7rem 1rem;font-family:var(--mono);font-size:.74rem;color:var(--txt);outline:none;letter-spacing:.04em;transition:var(--tr)}
+    .join-input:focus{border-color:var(--blue)}
+    .join-input::placeholder{color:var(--txt3)}
+    .join-btn{font-family:var(--mono);font-size:.72rem;font-weight:bold;color:#fff;background:var(--blue);border:1px solid var(--blue);padding:.7rem 1.4rem;letter-spacing:.1em;cursor:none;transition:var(--tr);text-transform:uppercase;white-space:nowrap}
+    .join-btn:hover{background:var(--blue2);box-shadow:var(--gb)}
+    .join-note{font-family:var(--mono);font-size:.62rem;color:var(--txt3);margin-top:.75rem;letter-spacing:.04em}
+
+    /* ── FAQ ────────────────────────────────────────── */
+    #faq{padding:7rem 0;border-bottom:1px solid var(--bdr);background:var(--bg2)}
+    .faq-layout{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:start}
+    /*.faq-sticky{position:sticky;top:90px}*/
+    .faq-list{display:flex;flex-direction:column;gap:1px;background:var(--bdr);border:1px solid var(--bdr)}
+    .faq-item{background:var(--bg2);overflow:hidden}
+    .faq-q{
+      display:flex;align-items:center;justify-content:space-between;gap:1rem;
+      padding:1.25rem 1.5rem;cursor:none;transition:var(--tr);
+    }
+    .faq-item.open .faq-q{background:rgba(31,81,255,.06)}
+    .faq-q:hover{background:rgba(31,81,255,.04)}
+    .faq-qtext{font-family:var(--mono);font-size:.76rem;color:var(--txt);letter-spacing:.04em;line-height:1.4}
+    .faq-icon{font-size:.8rem;color:var(--txt3);transition:var(--tr);flex-shrink:0}
+    .faq-item.open .faq-icon{transform:rotate(45deg);color:var(--blue)}
+    .faq-a{
+      max-height:0;overflow:hidden;
+      transition:max-height .4s cubic-bezier(.4,0,.2,1);
+    }
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-atext{font-family:var(--body);font-size:.9rem;color:var(--txt2);line-height:1.7;padding:0 1.5rem 1.25rem;border-top:1px solid var(--bdr2)}
+
+    /* ── CTA FOOTER ─────────────────────────────────── */
+    #cta{padding:7rem 0}
+    .cta-inner{
+      text-align:center;max-width:700px;margin:0 auto;
+      position:relative;
+    }
+    .cta-badge{
+      display:inline-block;font-family:var(--mono);font-size:.64rem;
+      color:var(--blue);border:1px solid var(--blue3);
+      padding:.3rem .85rem;letter-spacing:.15em;text-transform:uppercase;
+      background:rgba(31,81,255,.06);margin-bottom:2rem;
+    }
+    .cta-title{
+      font-family:var(--serif);
+      font-size:clamp(2.2rem,5vw,4rem);
+      font-weight:400;color:var(--txt);line-height:1.1;
+      margin-bottom:1.5rem;letter-spacing:-.01em;
+    }
+    .cta-title em{color:var(--blue);text-shadow:var(--gb);font-style:italic}
+    .cta-sub{font-family:var(--body);font-size:1rem;color:var(--txt2);margin-bottom:3rem;line-height:1.7}
+    .cta-actions{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+    .btn-cta{
+      font-family:var(--mono);font-size:.8rem;font-weight:bold;
+      color:var(--bg);background:var(--blue);border:none;
+      padding:.9rem 2.2rem;letter-spacing:.1em;cursor:none;
+      transition:var(--tr);text-transform:uppercase;
+      text-decoration:none;display:inline-flex;align-items:center;gap:.6rem;
+      clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);
+      position:relative;overflow:hidden;
+    }
+    .btn-cta::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transform:translateX(-100%);transition:transform .5s ease}
+    .btn-cta:hover::before{transform:translateX(100%)}
+    .btn-cta:hover{background:var(--blue2);box-shadow:var(--gb)}
+    .btn-outline{
+      font-family:var(--mono);font-size:.8rem;
+      color:var(--txt2);background:transparent;
+      border:1px solid var(--bdr);padding:.9rem 2.2rem;
+      letter-spacing:.1em;cursor:none;transition:var(--tr);
+      text-transform:uppercase;text-decoration:none;
+      display:inline-flex;align-items:center;gap:.6rem;
+    }
+    .btn-outline:hover{color:var(--txt);border-color:var(--txt2)}
+    
+    /* ── SCROLL REVEAL ──────────────────────────────── */
+    .rev{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .rev.vis{opacity:1;transform:none}
+    .rev.d1{transition-delay:.1s}.rev.d2{transition-delay:.2s}
+    .rev.d3{transition-delay:.3s}.rev.d4{transition-delay:.4s}
+    .rev.left{transform:translateX(-24px)}
+    .rev.left.vis{transform:none}
+    .rev.right{transform:translateX(24px)}
+    .rev.right.vis{transform:none}
+
+    /* ── KEYFRAMES ──────────────────────────────────── */
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(31,81,255,.5)}50%{box-shadow:0 0 0 6px rgba(31,81,255,0)}}
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media(max-width:1000px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-right{display:grid;grid-template-columns:repeat(2,1fr)}
+      .origin-grid,.mission-layout,.stack-intro,.community-inner,.faq-layout{grid-template-columns:1fr}
+      .origin-text{border-right:none;border-bottom:1px solid var(--bdr)}
+      .tl-inner{grid-template-columns:1fr}
+      .tl-header{position:relative;top:0}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .stack-grid{grid-template-columns:repeat(2,1fr)}
+      .footter-grid{grid-template-columns:1fr 1fr}      
+    }
+    @media(max-width:640px){
+      .team-grid,.hero-right{grid-template-columns:1fr}
+      .stack-grid{grid-template-columns:repeat(2,1fr)}
+      .post-nav,.join-form{flex-direction:column}
+      .cta-actions{flex-direction:column}      
+      .hero-bg-text{font-size:clamp(6rem,22vw,10rem)}
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div id="cur"></div>
+  <div id="crng"></div>
+  
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mnav">
+    <a href="../index.html">Home</a>
+    <a href="../roadmap/">Roadmap</a>
+    <a href="../blog/">Blog</a>
+    <a href="index.html">About</a>
+    <a href="#" style="color:var(--acc)">Login</a>
+    <a href="#" style="color:var(--blue)">Sign Up</a>
+  </div>
+
+  <!-- ─────── NAVBAR ─────── -->
+  <nav id="navbar">
+    <a href="../index.html" class="logo">
+      <span class="logo-bracket"></span>CyX<span style="color:var(--acc)">_9D</span><span class="logo-bracket"></span>
+      <span class="bl"></span>
+    </a>
+
+    <ul class="nlinks">
+      <li><a href="../index.html">home</a></li>
+      <li><a href="../roadmap/">roadmap</a></li>
+      <li><a href="../blog/" class="act">blog</a></li>
+      <li><a href="index.html">about</a></li>
+    </ul>
+
+    <div class="nauth">
+      <a href="#"><button class="nbg">Login</button></a>
+      <a href="#"><button class="nbp">Sign Up</button></a>
+    </div>
+    <button id="mclose">✕</button>
+    <button class="nhb" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─────── HERO ─────── -->
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-bg-text">CyX_9D</div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="pulse"></span>
+          About CyX_9D — Est. 2024
+        </div>
+        <h1 class="hero-h1">
+          Built by<br>
+          <em><span class="hero-changing-text">hackers.</span></em>
+          <span class="line2">For <span class="hero-changing-text">hackers.</span></span>
+        </h1>
+        <p class="hero-manifesto">
+          // We believe knowledge & all should be<br>
+          // <span>accessible, structured, and honest.</span><br>
+          //<br>
+          // No gatekeeping. No paywalled basics and foundations.<br>
+          // Just real knowledge, techniques, real tools,<br>
+          // and a community that <span>actually helps.</span>
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="stat-cell">
+          <div class="stat-n" data-count="50">0+</div>
+          <div class="stat-l">Community Members</div>
+          <div class="stat-d">// and growing</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-n" data-count="1">0</div>
+          <div class="stat-l">Posts & Writeups</div>
+          <div class="stat-d">// published since launch</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-n" data-count="42">0</div>
+          <div class="stat-l">Roadmap Lessons</div>
+          <div class="stat-d">// across 5 phases</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-n" data-count="100">0%</div>
+          <div class="stat-l">Free Content</div>
+          <div class="stat-d">// always. no exceptions.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-bar">
+      <div class="hero-bar-inner">
+        <div class="hb-tag">root@cyx_9d:~# <span>whoami && cat /etc/mission</span></div>
+        <div class="scroll-hint">↓ scroll to learn more</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ─────────  ORIGIN STORY ───────────────────────────── -->
+  <section id="origin">
+    <div class="container">
+      <div class="rev"><div class="sec-label">01 / ORIGIN</div></div>
+      <div class="origin-grid">
+        <div class="origin-text rev left">
+          <div class="sec-title" style="margin-bottom:1.5rem">How CyX<em>_9D</em><br>Came to Be</div>
+          <p>CyX_9D started in a dorm room in 2024 with a simple frustration: every resource for learning ethical hacking and other tech skills was either <strong>scattered across a thousand forums</strong>, locked behind expensive certifications, or written in a way that assumed you already knew everything.</p>
+           <p>The founder — a self-taught penetration tester and a growing Engineering student who broke into hacking, tech and engineering through sheer stubbornness — wanted to build the resource he wished existed when he started. Not a certification course. Not a YouTube channel. Something <strong>deeper, more structured, and completely free</strong>.</p>
+          <p>Two years later, CyX_9D has grown into a platform covering everything from Linux and hacking fundamentals to computer programming &amp; development — with writeups, tool guides, AI/ML security research, Maths &amp; Science full foundational course, and roadmaps that takes you from zero to elite without spending a single dollar on paywalls.</p>
+          <p>The mission hasn't changed. <strong>Ethical hacking knowledge and others, all belongs to everyone.</strong></p>
+        </div>
+        <div class="origin-terminal rev right">
+          <div class="term-bar">
+            <div class="t-dot t-r"></div>
+            <div class="t-dot t-y"></div>
+            <div class="t-dot t-g"></div>
+            <div class="t-title">bash — cyx_9d@origin:~</div>
+          </div>
+          <div class="t-line"><span class="t-pr">$</span><span class="t-cmd"> cat /etc/cyx_9d/mission.txt</span></div>
+          <div class="t-line"><span class="t-out t-grn">[CyX_9D Mission Statement]</span></div>
+          <div class="t-line"><span class="t-out">Make Knowledge &amp; education content</span></div>
+          <div class="t-line"><span class="t-out">accessible, honest & structured.</span></div>
+          <div class="t-line" style="margin-top:.5rem"><span class="t-pr">$</span><span class="t-cmd"> cat /etc/cyx_9d/values.conf</span></div>
+          <div class="t-line"><span class="t-out t-acc">free_content    = true</span></div>
+          <div class="t-line"><span class="t-out t-acc">gatekeeping     = false</span></div>
+          <div class="t-line"><span class="t-out t-acc">real_techniques = true</span></div>
+          <div class="t-line"><span class="t-out t-acc">community_first = true</span></div>
+          <div class="t-line" style="margin-top:.5rem"><span class="t-pr">$</span><span class="t-cmd"> uptime</span></div>
+          <div class="t-line"><span class="t-out t-amb">cyx_9d up 2 years, still building...</span></div>
+          <div class="t-line"><span class="t-pr">$</span><span class="t-cmd"> <span class="t-blink"></span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ────────────────── CyX_9D meaning ─────────────── -->
+  <section id="meaning">
+    <div class="container">
+      <div class="rev"><div class="sec-label">02 / MEANING</div></div>
+      <div class="meaning-grid">
+        <div class="meaning-text rev left">
+          <div class="sec-title" style="margin-bottom:1.5rem">What does<br>CyX<em>_9D</em> mean</div>
+          <p><em>CyX_9D</em> is a technology-focused learning and building ecosystem built around one idea: <strong>there is more than one dimension to understanding technology.</strong></p>
+          <p>The <strong>CyX</strong> identity represents the core — curiosity, systems thinking, experimentation, and the drive to understand how things work.</p>
+          <p>The <strong>_9D</strong> represents <strong>Nine Dimensions</strong>: a broader view of technology spanning areas such as:<br>
+<strong>Code · CyberSec · Intelligence · Robotics · Engineering · Systems · Automation · Research · Creation</strong><br><br>Together, <strong>CyX_9D</strong> represents a space where these disciplines connect rather than exist in isolation.</p>
+          <p>The name reflects what the platform is becoming: <strong>not simply a collection of tutorials, but an environment for learning, experimenting, building, and connecting ideas across different technical domains.</strong></p>
+          <p><strong>Why “9D”?</strong><br>Because technology doesn't exist in a single dimension.<br>
+          Programming connects to systems.<br>
+          Systems connect to engineering.<br>
+          Engineering connects to robotics.<br>
+          AI connects to intelligence and automation.<br>
+          Cybersecurity connects to almost everything.<br><br>
+          <strong>The boundaries overlap.</strong></p>
+          <p>That is the idea behind <strong>_9D</strong> — exploring technology from multiple dimensions and learning how those dimensions work together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────  MISSION / VALUES ─────────────────────── -->
+  <section id="mission">
+    <div class="container">
+      <div class="mission-layout">
+        <div class="rev left">
+          <div class="sec-label">02 / VALUES</div>
+          <div class="sec-title">What We<br>Stand <em>For</em></div>
+          <p class="sec-sub">Everything we build, write, and teach is grounded in these four principles. They are not aspirational — they are operational constraints.</p>
+        </div>
+        <div class="values-grid rev right">
+          <div class="value-card" style="--vc-col:var(--blue)">
+            <div class="value-icon">⬡</div>
+            <div class="value-body">
+              <div class="value-title">Radical Accessibility</div>
+              <div class="value-desc">Every lesson, writeup, and tool guide is free. No premium tier, no paywalled basics. If we can't give it away, we don't publish it.</div>
+            </div>
+          </div>
+          <div class="value-card" style="--vc-col:var(--grn)">
+            <div class="value-icon">⬡</div>
+            <div class="value-body">
+              <div class="value-title">Technical Honesty</div>
+              <div class="value-desc">We do not water down techniques or skip the hard parts. If something is complex, we explain it fully — not just hand you a one-liner to copy.</div>
+            </div>
+          </div>
+          <div class="value-card" style="--vc-col:var(--amb)">
+            <div class="value-icon">⬡</div>
+            <div class="value-body">
+              <div class="value-title">Ethical First</div>
+              <div class="value-desc">Every technique we teach &amp; do exists to make systems more secure. We are penetration testers, not criminals. Context and consent are non-negotiable.</div>
+            </div>
+          </div>
+          <div class="value-card" style="--vc-col:var(--pur)">
+            <div class="value-icon">⬡</div>
+            <div class="value-body">
+              <div class="value-title">Community Driven</div>
+              <div class="value-desc">CyX_9D grows through contributions. Real writeups from real engagements, not theoretical examples. The community is the product.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── TEAM ───────────────────────────── -->
+  <section id="team">
+    <div class="container">
+      <div class="rev">
+        <div class="sec-label">03 / TEAM</div>
+        <div class="sec-title">The People <em>Behind</em> the Lab</div>
+        <p class="sec-sub">A small, distributed team of practitioners — active pentesters, bug bounty hunters, builders, problem solvers and researchers who write from real experience.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card rev d1" style="--tc-col:var(--blue)">
+          <div class="tc-avatar">CP</div>
+          <div>
+            <div class="tc-name">Cyx3rpatriX</div>
+            <div class="tc-handle">@cyx</div>
+            <div class="tc-role">Founder · Lead Researcher</div>
+          </div>
+          <p class="tc-bio">Self-taught pentester turned independent researcher and builder. I’m driven by a curiosity for understanding how things work — from software & hardware and security to systems, programming, science, engineering, and technology.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Web Pentesting</span>
+            <span class="tc-skill">programming</span>
+            <span class="tc-skill">Bug Bounty</span>
+            <span class="tc-skill">IoT</span>
+          </div>
+          <div class="tc-links">
+            <a href="#" class="tc-link">Twitter</a>
+            <a href="#" class="tc-link">GitHub</a>
+            <a href="#" class="tc-link">Portfolio</a>
+          </div>
+        </div>
+<!--  
+        <div class="team-card rev d2" style="--tc-col:var(--red)">
+          <div class="tc-avatar" style="color:var(--red)">HG</div>
+          <div>
+            <div class="tc-name">HEAPGOD</div>
+            <div class="tc-handle">@heapgod</div>
+            <div class="tc-role">Exploit Dev · PWN Specialist</div>
+          </div>
+          <p class="tc-bio">Binary exploitation researcher and CTF veteran. 3× DEF CON CTF finalist. Writes about heap internals, ROP chains, and kernel exploitation from first principles.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Exploit Dev</span>
+            <span class="tc-skill">Heap Exploitation</span>
+            <span class="tc-skill">CTF</span>
+            <span class="tc-skill">Assembly</span>
+          </div>
+          <div class="tc-links">
+            <a href="#" class="tc-link">Twitter</a>
+            <a href="#" class="tc-link">GitHub</a>
+            <a href="#" class="tc-link">CTFtime</a>
+          </div>
+        </div>
+
+        <div class="team-card rev d3" style="--tc-col:var(--pur)">
+          <div class="tc-avatar" style="color:var(--pur)">N0</div>
+          <div>
+            <div class="tc-name">N0DE</div>
+            <div class="tc-handle">@n0de</div>
+            <div class="tc-role">AI/ML Security Researcher</div>
+          </div>
+          <p class="tc-bio">ML engineer turned adversarial security researcher. Studies prompt injection, model extraction, and adversarial inputs against production AI systems.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Adversarial ML</span>
+            <span class="tc-skill">LLM Security</span>
+            <span class="tc-skill">Python</span>
+            <span class="tc-skill">PyTorch</span>
+          </div>
+          <div class="tc-links">
+            <a href="#" class="tc-link">Twitter</a>
+            <a href="#" class="tc-link">GitHub</a>
+            <a href="#" class="tc-link">Papers</a>
+          </div>
+        </div>
+
+        <div class="team-card rev d1" style="--tc-col:var(--grn)">
+          <div class="tc-avatar" style="color:var(--grn)">R3</div>
+          <div>
+            <div class="tc-name">R3CON</div>
+            <div class="tc-handle">@r3con</div>
+            <div class="tc-role">Network Pentester · OSINT</div>
+          </div>
+          <p class="tc-bio">Network penetration testing specialist with a background in red team operations. Writes about AD attack paths, OSINT frameworks, and wireless security.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Network Pentesting</span>
+            <span class="tc-skill">Active Directory</span>
+            <span class="tc-skill">OSINT</span>
+            <span class="tc-skill">Red Team</span>
+          </div>
+          <div class="tc-links">
+            <a href="#" class="tc-link">Twitter</a>
+            <a href="#" class="tc-link">GitHub</a>
+            <a href="#" class="tc-link">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="team-card rev d2" style="--tc-col:var(--amb)">
+          <div class="tc-avatar" style="color:var(--amb)">B1</div>
+          <div>
+            <div class="tc-name">BIN1337</div>
+            <div class="tc-handle">@bin1337</div>
+            <div class="tc-role">Reverse Engineering · Malware</div>
+          </div>
+          <p class="tc-bio">Malware analyst and reverse engineer. Former threat intelligence at a Fortune 500. Writes deep technical breakdowns of real-world malware families and RE tooling.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">Reverse Engineering</span>
+            <span class="tc-skill">Malware Analysis</span>
+            <span class="tc-skill">Ghidra</span>
+            <span class="tc-skill">IDA Pro</span>
+          </div>
+          <div class="tc-links">
+            <a href="#" class="tc-link">Twitter</a>
+            <a href="#" class="tc-link">GitHub</a>
+            <a href="#" class="tc-link">Blog</a>
+          </div>
+        </div>
+
+        <div class="team-card rev d3" style="--tc-col:var(--pnk)">
+          <div class="tc-avatar" style="color:var(--pnk)">CR</div>
+          <div>
+            <div class="tc-name">CR4CK3R</div>
+            <div class="tc-handle">@cr4ck3r</div>
+            <div class="tc-role">CTF Champion · Crypto</div>
+          </div>
+          <p class="tc-bio">Competitive CTF player and cryptography enthusiast. Ranked top 10 globally on CTFtime. Writes walkthroughs that actually explain the maths behind the solves.</p>
+          <div class="tc-skills">
+            <span class="tc-skill">CTF</span>
+            <span class="tc-skill">Cryptography</span>
+            <span class="tc-skill">Math</span>
+            <span class="tc-skill">Python</span>
+          </div>
+          <div class="tc-links">
+            <a href="#" class="tc-link">Twitter</a>
+            <a href="#" class="tc-link">CTFtime</a>
+            <a href="#" class="tc-link">GitHub</a>
+          </div>
+        </div>
+ -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── TIMELINE ────────────── -->
+  <section id="timeline">
+    <div class="container">
+      <div class="tl-inner">
+        <div class="tl-header rev left">
+          <div class="sec-label">04 / HISTORY</div>
+          <div class="sec-title">Our <em>Journey</em><br>So Far</div>
+          <p class="sec-sub" style="margin-top:.75rem">From a single blog post to a full structured platform.</p>
+        </div>
+        <div class="tl-items">
+          <div class="tl-item rev">
+            <div class="tl-left"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-badge" style="color:var(--grn);border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.06)">FOUNDED</div>
+              <div class="tl-year">Q1 2024</div>
+              <div class="tl-event">CyX_9D Goes Live</div>
+              <p class="tl-desc">First published as a personal blog with three web security writeups. No audience, no plan — just frustration turned into content.</p>
+            </div>
+          </div>
+          <div class="tl-item rev">
+            <div class="tl-left"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-badge" style="color:var(--blue);border-color:rgba(31,81,255,.35);background:rgba(31,81,255,.07)">MILESTONE</div>
+              <div class="tl-year">Q3 2024</div>
+              <div class="tl-event">Roadmap v1 Launched</div>
+              <p class="tl-desc">The first structured learning roadmap — 24 topics across 4 phases — went live and attracted visitors in the first week.</p>
+            </div>
+          </div>
+          <div class="tl-item rev">
+            <div class="tl-left"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-badge" style="color:var(--amb);border-color:rgba(255,170,0,.35);background:rgba(255,170,0,.07)">GROWTH</div>
+              <div class="tl-year">Q1 2025</div>
+              <div class="tl-event">The vision grows</div>
+              <p class="tl-desc">CyX_9D evolved beyond being simply a cybersecurity-focused project. The vision expanded into a broader learning ecosystem — one where someone could study programming, cybersecurity, AI, physics, engineering, and other technical fields while developing the ability to actually apply what they learn. The goal became bigger than teaching concepts. <br/> Understand → Practice → Build → Master..</p>
+            </div>
+          </div>
+          <div class="tl-item rev">
+            <div class="tl-left"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-badge" style="color:var(--red);border-color:rgba(255,34,68,.35);background:rgba(255,34,68,.07)">EXPANSION</div>
+              <div class="tl-year">Q3 2025</div>
+              <div class="tl-event">Full Platform Rebuild</div>
+              <p class="tl-desc">Complete redesign and rebuild of the platform. Progress tracking, per-lesson content, blog system, and tool guides all shipped. Added more writeups in the archive.</p>
+            </div>
+          </div>
+          <div class="tl-item rev">
+            <div class="tl-left"><div class="tl-dot active"></div></div>
+            <div class="tl-content">
+              <div class="tl-badge" style="color:var(--pur);border-color:rgba(168,85,247,.35);background:rgba(168,85,247,.07)">NOW</div>
+              <div class="tl-year">2026 — Present</div>
+              <div class="tl-event">Still Building</div>
+              <p class="tl-desc">More lessons and roadmap coming soon... more posts. Cloud-synced progress tracking, lab challenges, and authenticated accounts in active development. The best is still ahead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── STACK ────────────── -->
+  <section id="stack">
+    <div class="container">
+      <div class="stack-intro">
+        <div class="rev left">
+          <div class="sec-label">05 / TOOLS WE USE</div>
+          <div class="sec-title">The Lab's <em>Arsenal</em></div>
+          <p class="sec-sub">The tools our researchers and builders use daily — and write about from real experience, not tutorials.</p>
+        </div>
+        <div class="rev right" style="font-family:var(--mono);font-size:.75rem;color:var(--txt2);line-height:2;border-left:2px solid var(--blue3);padding-left:1.25rem">
+          <div style="color:var(--blue)">// We only write about tools we actually use.</div>
+          <div>// No affiliate links. No sponsored content.</div>
+          <div>// If we recommend it, we've broken something with it &amp; we've built something with it.</div>
+        </div>
+      </div>
+      <div class="stack-grid rev">
+        <div class="stack-item"><div class="stack-icon">🔍</div><div class="stack-name">Burp Suite</div><div class="stack-cat">Web Pentesting</div></div>
+        <div class="stack-item"><div class="stack-icon">🗺</div><div class="stack-name">Nmap</div><div class="stack-cat">Network Scanning</div></div>
+        <div class="stack-item"><div class="stack-icon">💥</div><div class="stack-name">Metasploit</div><div class="stack-cat">Exploitation</div></div>
+        <div class="stack-item"><div class="stack-icon">🩸</div><div class="stack-name">BloodHound</div><div class="stack-cat">Active Directory</div></div>
+        <div class="stack-item"><div class="stack-icon">👻</div><div class="stack-name">Ghidra</div><div class="stack-cat">Reverse Engineering</div></div>
+        <div class="stack-item"><div class="stack-icon">🐍</div><div class="stack-name">pwntools</div><div class="stack-cat">Exploit Development</div></div>
+        <div class="stack-item"><div class="stack-icon">🦈</div><div class="stack-name">Wireshark</div><div class="stack-cat">Network Analysis</div></div>
+        <div class="stack-item"><div class="stack-icon">🔑</div><div class="stack-name">Hashcat</div><div class="stack-cat">Password Cracking</div></div>
+        <div class="stack-item"><div class="stack-icon">🕷</div><div class="stack-name">SQLmap</div><div class="stack-cat">SQLi Automation</div></div>
+        <div class="stack-item"><div class="stack-icon">📡</div><div class="stack-name">Aircrack-ng</div><div class="stack-cat">Wireless Security</div></div>
+        <div class="stack-item"><div class="stack-icon">🤖</div><div class="stack-name">Havoc C2</div><div class="stack-cat">Red Teaming</div></div>
+        <div class="stack-item"><div class="stack-icon">⚡</div><div class="stack-name">AFL++</div><div class="stack-cat">Fuzzing</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── COMMUNITY ────────────── -->
+  <section id="community">
+    <div class="container">
+      <div class="community-wrap">
+        <div class="community-bg"></div>
+        <div class="community-inner">
+          <div class="comm-left rev left">
+            <div class="sec-label">06 / COMMUNITY</div>
+            <div class="sec-title" style="margin-bottom:1.75rem">Find Your<br><em>People</em></div>
+            <div class="comm-channels">
+              <a href="#" class="ch-card" style="--ch-col:var(--pur)">
+                <div class="ch-icon">💬</div>
+                <div class="ch-info">
+                  <div class="ch-name">Discord Server</div>
+                  <div class="ch-desc">// Real-time help, CTF teams, career chat</div>
+                </div>
+                <span class="ch-count" style="color:var(--pur)">Coming soon</span>
+              </a>
+              <a href="#" class="ch-card" style="--ch-col:var(--blue)">
+                <div class="ch-icon">𝕏</div>
+                <div class="ch-info">
+                  <div class="ch-name">Twitter / X</div>
+                  <div class="ch-desc">// Tips, CVE breakdowns, new posts</div>
+                </div>
+                <span class="ch-count" style="color:var(--blue)">Coming soon</span>
+              </a>
+              <a href="#" class="ch-card" style="--ch-col:var(--grn)">
+                <div class="ch-icon">gh</div>
+                <div class="ch-info">
+                  <div class="ch-name">GitHub</div>
+                  <div class="ch-desc">// Tools, PoCs, scripts & lab code</div>
+                </div>
+                <span class="ch-count" style="color:var(--grn)">Coming soon</span>
+              </a>
+              <a href="#" class="ch-card" style="--ch-col:var(--red)">
+                <div class="ch-icon">▶</div>
+                <div class="ch-info">
+                  <div class="ch-name">YouTube</div>
+                  <div class="ch-desc">// Video walkthroughs & live streams</div>
+                </div>
+                <span class="ch-count" style="color:var(--red)">Coming soon</span>
+              </a>
+            </div>
+          </div>
+          <div class="comm-right rev right">
+            <div class="join-box">
+              <h3>Start Your<br><em>Journey Today</em></h3>
+              <p>
+                // Create a free account to track your roadmap progress,<br>
+                // bookmark writeups, unlock lab challenges,<br>
+                // and join others who are<br>
+                // learning the craft the right way.
+              </p>
+              <div class="join-form">
+                <input type="email" class="join-input" placeholder="enter your email..."/>
+                <button class="join-btn">GET ACCESS</button>
+              </div>
+              <div class="join-note">// Free. No credit card. No spam.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── FAQ ────────────── -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-sticky rev left">
+          <div class="sec-label">07 / FAQ</div>
+          <div class="sec-title">Common<br><em>Questions</em></div>
+          <p class="sec-sub" style="margin-top:.75rem">Straight answers. No marketing copy.</p>
+        </div>
+        <div class="faq-list rev right">
+          <div class="faq-item open">
+            <div class="faq-q" onclick="toggleFAQ(this)">
+              <span class="faq-qtext">Is CyX_9D really completely free?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <p class="faq-atext">Yes — completely, unconditionally free. No premium tier, no paywalled articles, no "starter plan." Every writeup, every roadmap lesson, every tool guide is accessible without an account. Creating an account only adds progress tracking and bookmarks.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFAQ(this)">
+              <span class="faq-qtext">Do I need any prior experience to start?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <p class="faq-atext">No. Any article or Phase 1 of any roadmap starts from zero — Linux command line, networking fundamentals, and setting up a lab. If you can use a computer and you're willing to spend time in a terminal, you can start from the beginning and work your way up.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFAQ(this)">
+              <span class="faq-qtext">Is the content actually ethical? Am I learning to hack illegally?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <p class="faq-atext">Everything here, and every technique taught on CyX_9D is for use on systems you own, have explicit permission to test, or on intentional practice environments (HackTheBox, TryHackMe, VulnHub). We cover the legal and ethical framework in Phase 1. Unauthorised access to systems is illegal everywhere — we teach skills, not crimes.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFAQ(this)">
+              <span class="faq-qtext">Can I contribute a writeup or post?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <p class="faq-atext">Absolutely. We actively want community contributions — CTF writeups, tool guides, technique breakdowns. If you've learned something the hard way and want to save others the frustration, reach out via Email or the Contact us page. All contributors are credited.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFAQ(this)">
+              <span class="faq-qtext">How often is new content published?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <p class="faq-atext">The core team publishes 2–4 pieces per week. Between writeups, tool guides, roadmap updates, and CTF walkthroughs, there's consistently new content. Subscribe to the newsletter if you don't want to miss anything.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFAQ(this)">
+              <span class="faq-qtext">Will CyX_9D ever go paid or add ads?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-a">
+              <p class="faq-atext">No ads, ever. The platform is currently self-funded. If we ever pursue sustainability through revenue, it will be through optional merchandise or voluntary support — not by locking content or injecting ads into the reading experience. That commitment is in writing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── CTA ────────────── -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-inner rev">
+        <div class="cta-badge">// FREE · NO CREDIT CARD · NO BS</div>
+        <h2 class="cta-title">
+          Ready to Start<br>
+          <em>Learning & Building?</em>
+        </h2>
+        <p class="cta-sub">
+          Join other learners on of the most structured free educational platform on the internet. Start the roadmap today — no account required to begin.
+        </p>
+        <div class="cta-actions">
+          <a href="roadmap.html" class="btn-cta">▶ START THE ROADMAP</a>
+          <a href="blog.html" class="btn-outline">⬡ EXPLORE THE BLOG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── FOOTER ────────────── -->
+  <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-bracket"></span>CyX<span style="color:var(--acc)">_9D</span><span class="logo-bracket"></span>
+                    </a>
+                    <p class="footer-tagline">
+                        The learning &amp; Building platform.<br>
+                        Structured paths. Real techniques. Honest craft. Build better foundations.<br>
+                        root@cyx_9d:~# knowledge --is-power
+                    </p>
+                    <div class="footer-socials">
+                        <a href="" class="social-btn" title="Twitter">𝕏</a>
+                        <a href="https://github.com/Cyx3rpatriX" class="social-btn" title="GitHub">gh</a>
+                        <a href="" class="social-btn" title="Discord">dc</a>
+                        <a href="" class="social-btn" title="YouTube">yt</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Learn</div>
+                    <ul class="footer-links">
+                        <li><a href="/roadmap/">Roadmap</a></li>
+                        <li><a href="#">Web Exploitation</a></li>
+                        <li><a href="#">Network Hacking</a></li>
+                        <li><a href="#">Reverse Engineering</a></li>
+                        <li><a href="#">AI/ML Security</a></li>
+                        <li><a href="#">CTF Writeups</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <div class="footer-heading">Platform</div>
+                    <ul class="footer-links">
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="#">Tool Guides</a></li>
+                        <li><a href="#">Walkthroughs</a></li>
+                        <li><a href="#">Tips &amp; Tricks</a></li>
+                        <li><a href="/about/">About</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Account</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Progress Tracker</a></li>
+                        <li><a href="#">Bookmarks</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copy">
+                        © 2026 CyX_9D — FOR EDUCATIONAL PURPOSES ONLY // HACK, BUILD &amp; CREATE ETHICALLY, ALWAYS!
+                </div>
+                <div class="footer-legal">
+                    <a href="">Privacy</a>
+                    <a href="">Terms</a>
+                    <a href="">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+  </footer>
+
+  <!-- ── SCRIPTS ──────────────────────────────────────── -->
+  <script src="./js/index.js"></script>
+  <script>
+    /* --- Hero text changing ---- */
+    const heroTexts = document.querySelectorAll(".hero-changing-text");
+    
+    const hero_phrases = [
+      "Engineers.",
+      "Programmers.",
+      "Problem Solvers.",
+      "Hackers."
+    ];
+    
+    let currentIndex = 0;
+    
+    setInterval(() => {
+      heroTexts.forEach(textElement => {
+        textElement.classList.add("is-changing");
+      });
+      
+      setTimeout(() => {
+        // Move to next phrase index (only needs to happen once per interval)
+        currentIndex = (currentIndex + 1) % hero_phrases.length;
+      
+        // 3. Loop through all elements again to change text and remove the class
+        heroTexts.forEach(textElement => {
+          textElement.textContent = hero_phrases[currentIndex];
+          textElement.classList.remove("is-changing");
+        });
+      }, 350);
+    }, 3500);
+     
+    
+    /* scroll reveal */
+    const ioR=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) {
+          e.target.classList.add('vis');
+          ioR.unobserve(e.target);
+        }
+      });
+    },{threshold:.07});
+    document.querySelectorAll('.rev').forEach(el=>ioR.observe(el));
+
+    /* counter animation */
+    function animCount(el,target,suffix){
+      let cur=0;
+      const dur=1800,step=16;
+      const inc=target/(dur/step);
+      const t=setInterval(()=>{
+        cur=Math.min(cur+inc,target);
+        el.textContent=Math.floor(cur)+(suffix||'');
+        if(cur>=target)clearInterval(t);
+      },step);
+    }
+
+    const cObs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          document.querySelectorAll('[data-count]').forEach(el=>{
+            const n=+el.dataset.count;
+            const suf=el.textContent.replace(/[0-9]/g,'');
+            animCount(el,n,suf);
+          });
+          cObs.disconnect();
+        }
+      });
+    },{threshold:.4});
+    const statsEl=document.querySelector('.hero-right');
+    if(statsEl)cObs.observe(statsEl);
+
+    /* FAQ toggle */
+    function toggleFAQ(btn){
+      const item=btn.parentElement;
+      const isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen)item.classList.add('open');
+    }
+
+    /* smooth anchors */
+    document.addEventListener('click',e=>{
+      const a=e.target.closest('a[href^="#"]');
+      if(a){
+        const t=document.querySelector(a.getAttribute('href'));
+        if(t){
+          e.preventDefault();
+          t.scrollIntoView({behavior:'smooth'});
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
