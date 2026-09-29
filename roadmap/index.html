@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <metar name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="🚧Explore CyX_9D — a cyber-inspired learning ecosystem built to help you understand, build, experiment, and master technology, science, engineering, and cybersecurity.">
+  <meta name="author" content="David Patrick (Cyx3rpatriX)">
+  <meta name="robots" content="index, follow">
+  <!-- BRAND / BROWSER -->
+  <meta name="application-name" content="CyX_9D">
+  <meta name="theme-color" content="#1F51FF">
+  <!-- CANONICAL URL -->
+  <link rel="canonical" href="https://cyx3rpatrix.github.io/roadmap/">
+  <!-- OPEN GRAPH — SOCIAL SHARING -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CyX_9D">
+  <meta property="og:title" content="CyX_9D — Roadmap">
+  <meta property="og:description" content="🚧Explore CyX_9D — a cyber-inspired learning ecosystem built to help you understand, build, experiment, and master technology, science, engineering, and cybersecurity.">
+  <meta property="og:url" content="https://cyx3rpatrix.github.io/roadmap/">
+  <meta property="og:image" content="https://cyx3rpatrix.github.io/assets/images/cyx-og-image.png">
+  <meta property="og:image:alt" content="CyX_9D — Learn, Build & Master Technology">
+  <!-- X / TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CyX_9D — Learn, Build & Master Technology">
+  <meta name="twitter:description" content="🚧Explore CyX_9D — a cyber-inspired learning ecosystem built to help you understand, build, experiment, and master technology, science, engineering, and cybersecurity.">
+  <meta name="twitter:image" content="https://cyx3rpatrix.github.io/assets/images/cyx-og-image.png">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="https://cyx3rpatrix.github.io/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="https://cyx3rpatrix.github.io/assets/images/favicon.png">
+  <!--
+    OPTIONAL: WEB APP / PWA
+    Only add manifest.json when you actually
+    create a PWA manifest.
+  -->
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!--
+    OPTIONAL: JSON-LD STRUCTURED DATA
+    Recommended later when we build your
+    proper SEO/structured-data layer.
+  -->
+  <title>CyX_9D — Blog</title>
+  <link rel="stylesheet" href="../assets/css/themes.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── HERO ──────────────────────────────────────── */
+    .hero {
+      position:relative; z-index:1;
+      padding:4rem 2rem 2.5rem;
+      text-align:center;
+      border-bottom:1px solid var(--bdr2);
+      background:linear-gradient(180deg, rgba(31,81,255,.03) 0%, transparent 100%);
+    }
+    .hero-eyebrow {
+      font-family:var(--mono); font-size:.6rem; color:var(--blue);
+      letter-spacing:.25em; text-transform:uppercase; margin-bottom:1rem;
+    }
+    .hero-title {
+      font-family:var(--disp); font-size:clamp(1.8rem,4vw,3rem);
+      font-weight:900; letter-spacing:-.01em; line-height:1.05;
+      margin-bottom:1rem;
+    }
+    .hero-title em { color:var(--blue); font-style:normal; }
+    .hero-sub {
+      font-family:var(--body); font-size:1rem; color:var(--txt2);
+      max-width:560px; margin:0 auto 2rem; line-height:1.7;
+    }
+    .hero-stats {
+      display:flex; justify-content:center; gap:2.5rem; flex-wrap:wrap;
+    }
+    .hs { text-align:center; }
+    .hs-num {
+      font-family:var(--disp); font-size:1.4rem; font-weight:900;
+      color:var(--blue); display:block;
+    }
+    .hs-lbl {
+      font-family:var(--mono); font-size:.55rem; color:var(--txt3);
+      letter-spacing:.15em; text-transform:uppercase;
+    }
+
+    /* ── FILTER BAR ─────────────────────────────────── */
+    .filter-bar {
+      position:relative; z-index:1;
+      padding:1.5rem 2rem;
+      display:flex; align-items:center; gap:.75rem; flex-wrap:wrap;
+      border-bottom:1px solid var(--bdr2);
+      background:var(--bg2);
+    }
+    .filter-label {
+      font-family:var(--mono); font-size:.55rem; color:var(--txt3);
+      letter-spacing:.15em; text-transform:uppercase; margin-right:.25rem;
+    }
+    .fb {
+      font-family:var(--mono); font-size:.6rem; letter-spacing:.08em;
+      text-transform:uppercase; padding:.35rem .8rem;
+      background:transparent; border:1px solid var(--bdr);
+      color:var(--txt2); cursor:none; transition:all .2s;
+    }
+    .fb:hover { border-color:var(--blue); color:var(--acc); }
+    .fb.act   { background:var(--blue); border-color:var(--blue); color:#fff; }
+
+    /* ── MAIN GRID ──────────────────────────────────── */
+    .main {
+      position:relative; z-index:1;
+      max-width:1280px; margin:0 auto;
+      padding:2.5rem 2rem 4rem;
+    }
+
+    .section-hdr {
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:1.5rem;
+    }
+    .section-title {
+      font-family:var(--mono); font-size:.6rem; color:var(--blue);
+      letter-spacing:.2em; text-transform:uppercase;
+    }
+    .section-count {
+      font-family:var(--mono); font-size:.55rem; color:var(--txt3);
+    }
+
+    .roadmaps-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(340px, 1fr));
+      gap:1.25rem;
+    }
+
+    /* ── ROADMAP CARD ──────────────────────────────── */
+    .rm-card {
+      position:relative;
+      background:var(--bg2);
+      border:1px solid var(--bdr);
+      padding:1.75rem;
+      display:flex; flex-direction:column; gap:1rem;
+      transition:border-color .25s, transform .25s, box-shadow .25s;
+      overflow:hidden;
+      cursor:none;
+    }
+    .rm-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background:var(--card-color, var(--blue));
+      transform:scaleX(0); transform-origin:left;
+      transition:transform .3s;
+    }
+    .rm-card:hover { border-color:var(--card-color, var(--blue)); transform:translateY(-3px); box-shadow:0 8px 32px rgba(0,0,0,.4); }
+    .rm-card:hover::before { transform:scaleX(1); }
+
+    .rm-card.locked {
+      opacity:.6; filter:grayscale(.4);
+    }
+    .rm-card.locked:hover { transform:none; box-shadow:none; border-color:var(--bdr); }
+    .rm-card.locked::before { display:none; }
+
+    /* Card header */
+    .rm-card-top {
+      display:flex; align-items:flex-start; justify-content:space-between; gap:1rem;
+    }
+    .rm-icon {
+      width:48px; height:48px; flex-shrink:0;
+      border:1px solid var(--card-color, var(--blue));
+      background:rgba(31,81,255,.06);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.4rem;
+    }
+    .rm-badges { display:flex; flex-direction:column; align-items:flex-end; gap:.35rem; }
+    .rm-badge {
+      font-family:var(--mono); font-size:.5rem; letter-spacing:.12em;
+      text-transform:uppercase; padding:.2rem .5rem;
+      border:1px solid; white-space:nowrap;
+    }
+    .badge-avail  { color:var(--grn); border-color:rgba(0,229,160,.3); background:rgba(0,229,160,.06); }
+    .badge-soon   { color:var(--amb); border-color:rgba(255,170,0,.3);  background:rgba(255,170,0,.06);  }
+    .badge-beta   { color:var(--pur); border-color:rgba(168,85,247,.3); background:rgba(168,85,247,.06); }
+    .badge-new    { color:var(--pnk); border-color:rgba(255,110,180,.3);background:rgba(255,110,180,.06);}
+
+    /* Difficulty badge */
+    .diff-badge {
+      font-family:var(--mono); font-size:.48rem; letter-spacing:.1em;
+      text-transform:uppercase; padding:.15rem .4rem; border:1px solid;
+    }
+    .diff-beg  { color:#00e5a0; border-color:rgba(0,229,160,.3);  }
+    .diff-int  { color:#ffaa00; border-color:rgba(255,170,0,.3);  }
+    .diff-adv  { color:#ff2244; border-color:rgba(255,34,68,.3);  }
+    .diff-all  { color:#7eb3ff; border-color:rgba(126,179,255,.3);}
+
+    /* Card body */
+    .rm-cat {
+      font-family:var(--mono); font-size:.55rem; color:var(--card-color, var(--blue));
+      letter-spacing:.15em; text-transform:uppercase;
+    }
+    .rm-title {
+      font-family:var(--disp); font-size:1rem; font-weight:700;
+      color:var(--txt); letter-spacing:.02em; line-height:1.2;
+    }
+    .rm-desc {
+      font-family:var(--body); font-size:.88rem; color:var(--txt2);
+      line-height:1.6; flex:1;
+    }
+
+    /* Tags */
+    .rm-tags { display:flex; flex-wrap:wrap; gap:.35rem; }
+    .rm-tag {
+      font-family:var(--mono); font-size:.5rem; letter-spacing:.08em;
+      color:var(--txt3); border:1px solid var(--bdr2); padding:.15rem .4rem;
+    }
+
+    /* Progress bar */
+    .rm-progress { display:flex; flex-direction:column; gap:.4rem; }
+    .rm-prog-hdr {
+      display:flex; justify-content:space-between;
+      font-family:var(--mono); font-size:.55rem; color:var(--txt3);
+    }
+    .rm-prog-bar {
+      height:3px; background:var(--bdr2); position:relative; overflow:hidden;
+    }
+    .rm-prog-fill {
+      position:absolute; left:0; top:0; bottom:0;
+      background:var(--card-color, var(--blue));
+      transition:width 1s cubic-bezier(.22,1,.36,1);
+    }
+
+    /* Stats row */
+    .rm-stats {
+      display:flex; gap:1.25rem; flex-wrap:wrap;
+    }
+    .rm-stat {
+      display:flex; flex-direction:column; gap:.2rem;
+    }
+    .rm-stat-num {
+      font-family:var(--disp); font-size:.85rem; font-weight:700;
+      color:var(--txt);
+    }
+    .rm-stat-lbl {
+      font-family:var(--mono); font-size:.5rem; color:var(--txt3);
+      letter-spacing:.1em; text-transform:uppercase;
+    }
+
+    /* CTA */
+    .rm-cta {
+      display:flex; align-items:center; justify-content:space-between;
+      gap:1rem; margin-top:.25rem;
+    }
+    .rm-btn {
+      font-family:var(--mono); font-size:.6rem; letter-spacing:.12em;
+      text-transform:uppercase; text-decoration:none;
+      padding:.65rem 1.25rem; border:none; cursor:none;
+      transition:all .2s; display:inline-block;
+    }
+    .rm-btn-primary {
+      background:var(--card-color, var(--blue)); color:#fff;
+    }
+    .rm-btn-primary:hover { opacity:.85; }
+    .rm-btn-locked {
+      background:var(--bdr2); color:var(--txt3); cursor:not-allowed;
+    }
+    .rm-btn-outline {
+      background:transparent; color:var(--card-color, var(--blue));
+      border:1px solid var(--card-color, var(--blue));
+    }
+    .rm-btn-outline:hover { background:var(--card-color, var(--blue)); color:#fff; }
+
+    .rm-notify {
+      font-family:var(--mono); font-size:.55rem; color:var(--txt3);
+      cursor:none; text-decoration:underline; text-underline-offset:3px;
+      background:none; border:none;
+    }
+    .rm-notify:hover { color:var(--acc); }
+
+    /* ── COMING SOON SECTION ──────────────────────────── */
+    .coming-soon-section { margin-top:3rem; }
+    .divider-line {
+      height:1px; background:var(--bdr2); margin-bottom:1.5rem; position:relative;
+    }
+    .divider-line span {
+      position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+      background:var(--bg); padding:0 1rem;
+      font-family:var(--mono); font-size:.55rem; color:var(--txt3); letter-spacing:.15em;
+      text-transform:uppercase; white-space:nowrap;
+    }
+
+    /* ── SUGGEST BANNER ───────────────────────────────── */
+    .suggest-banner {
+      margin-top:2.5rem;
+      background:var(--bg2);
+      border:1px solid var(--bdr);
+      border-left:3px solid var(--blue);
+      padding:1.5rem 2rem;
+      display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;
+      position:relative; z-index:1;
+    }
+    .sb-icon { font-size:1.5rem; flex-shrink:0; }
+    .sb-body { flex:1; }
+    .sb-title {
+      font-family:var(--disp); font-size:.8rem; font-weight:700;
+      color:var(--txt); letter-spacing:.04em; margin-bottom:.35rem;
+    }
+    .sb-sub { font-family:var(--body); font-size:.85rem; color:var(--txt2); line-height:1.5; }
+    .sb-cta {
+      font-family:var(--mono); font-size:.6rem; letter-spacing:.1em;
+      text-transform:uppercase; padding:.6rem 1.2rem;
+      background:transparent; border:1px solid var(--blue);
+      color:var(--blue); cursor:none; transition:all .2s; text-decoration:none;
+      display:inline-block; white-space:nowrap;
+    }
+    .sb-cta:hover { background:var(--blue); color:#fff; }
+
+    /* ── NOTIFY TOAST ─────────────────────────────── */
+    .toast {
+      position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(100px);
+      background:var(--surf2); border:1px solid var(--bdr);
+      border-left:3px solid var(--grn);
+      padding:.75rem 1.5rem;
+      font-family:var(--mono); font-size:.65rem; color:var(--grn);
+      letter-spacing:.08em; z-index:9999;
+      transition:transform .3s cubic-bezier(.22,1,.36,1);
+      pointer-events:none;
+    }
+    .toast.show { transform:translateX(-50%) translateY(0); }
+
+    /* ── MOBILE ───────────────────────────────────── */
+    @media (max-width:768px) {
+      .roadmaps-grid { grid-template-columns:1fr; }
+      .hero-stats { gap:1.5rem; }
+      .filter-bar { gap:.5rem; }
+      .suggest-banner { flex-direction:column; text-align:center; }
+      .main { padding:2rem 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div id="cur"></div>
+  <div id="crng"></div>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mnav">
+    <a href="../index.html">Home</a>
+    <a href="../roadmap/">Roadmap</a>
+    <a href="../blog/">Blog</a>
+    <a href="index.html">About</a>
+    <a href="#" style="color:var(--acc)">Login</a>
+    <a href="#" style="color:var(--blue)">Sign Up</a>
+  </div>
+
+  <!-- ─────── NAVBAR ─────── -->
+  <nav id="navbar">
+    <a href="../index.html" class="logo">
+      <span class="logo-bracket"></span>CyX<span style="color:var(--acc)">_9D</span><span class="logo-bracket"></span>
+      <span class="bl"></span>
+    </a>
+
+    <ul class="nlinks">
+      <li><a href="../index.html">home</a></li>
+      <li><a href="../roadmap/">roadmap</a></li>
+      <li><a href="../blog/" class="act">blog</a></li>
+      <li><a href="index.html">about</a></li>
+    </ul>
+
+    <div class="nauth">
+      <a href="#"><button class="nbg">Login</button></a>
+      <a href="#"><button class="nbp">Sign Up</button></a>
+    </div>
+    <button id="mclose">✕</button>
+    <button class="nhb" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">// choose your path</div>
+    <h1 class="hero-title">Learning<br><em>Roadmaps</em></h1>
+    <p class="hero-sub">
+      Structured, step-by-step learning paths across cybersecurity, networking,
+      programming, and beyond. Pick a track, follow the path, level up.
+    </p>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-num" id="stat-tracks">8</span><span class="hs-lbl">// tracks</span></div>
+      <div class="hs"><span class="hs-num">200+</span><span class="hs-lbl">// lessons</span></div>
+      <div class="hs"><span class="hs-num" id="stat-members">4.2k</span><span class="hs-lbl">// learners</span></div>
+      <div class="hs"><span class="hs-num">Free</span><span class="hs-lbl">// always</span></div>
+    </div>
+  </section>
+  
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <span class="filter-label">// filter:</span>
+    <button class="fb act" data-filter="all">All Tracks</button>
+    <button class="fb" data-filter="security">Security</button>
+    <button class="fb" data-filter="networking">Networking</button>
+    <button class="fb" data-filter="programming">Programming</button>
+    <button class="fb" data-filter="intelligence">Intelligence</button>
+    <button class="fb" data-filter="industrial">Industrial</button>
+  </div>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <!-- Active roadmaps -->
+    <div class="section-hdr">
+      <span class="section-title">// available now</span>
+      <span class="section-count" id="availCount">1 roadmap</span>
+    </div>
+
+    <div class="roadmaps-grid" id="roadmapsGrid">
+
+      <!-- ── ETHICAL HACKING ── -->
+      <div class="rm-card" style="--card-color:#1F51FF" data-cat="security">
+        <div class="rm-card-top">
+          <div class="rm-icon">☠</div>
+          <div class="rm-badges">
+            <span class="rm-badge badge-avail">✓ Available</span>
+            <span class="rm-badge badge-new">★ Featured</span>
+          </div>
+        </div>
+        <div>
+          <div class="rm-cat">Security</div>
+          <div class="rm-title">Ethical Hacking</div>
+        </div>
+        <p class="rm-desc">
+          The complete offensive security roadmap. From Linux fundamentals to
+          advanced exploit development — 5 phases, 42 structured lessons covering
+          every layer of the attack chain.
+        </p>
+        <div class="rm-tags">
+          <span class="rm-tag">Penetration Testing</span>
+          <span class="rm-tag">CTF</span>
+          <span class="rm-tag">Web Security</span>
+          <span class="rm-tag">Active Directory</span>
+          <span class="rm-tag">Exploit Dev</span>
+        </div>
+        <div class="rm-stats">
+          <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
+          <div class="rm-stat"><span class="rm-stat-num">42</span><span class="rm-stat-lbl">Lessons</span></div>
+          <div class="rm-stat"><span class="rm-stat-num">~120h</span><span class="rm-stat-lbl">Estimated</span></div>
+          <div class="rm-stat"><span class="rm-stat-num diff-adv" style="font-size:.65rem;border:1px solid rgba(255,34,68,.3);padding:.1rem .35rem">Advanced</span><span class="rm-stat-lbl">Difficulty</span></div>
+        </div>
+        <div class="rm-progress" id="ehProgress" style="display:none">
+          <div class="rm-prog-hdr"><span>YOUR PROGRESS</span><span id="ehPct">0%</span></div>
+          <div class="rm-prog-bar"><div class="rm-prog-fill" id="ehFill" style="width:0%"></div></div>
+        </div>
+        <div class="rm-cta">
+          <a href="hacking.html" class="rm-btn rm-btn-primary">START ROADMAP →</a>
+          <a href="hacking.html" class="rm-btn rm-btn-outline" style="font-size:.52rem">CONTINUE ↗</a>
+        </div>
+      </div>
+
+    </div><!-- /roadmapsGrid -->
+
+    <!-- Coming Soon -->
+    <div class="coming-soon-section">
+      <div class="divider-line"><span>// coming soon</span></div>
+
+      <div class="section-hdr">
+        <span class="section-title">// in development</span>
+        <span class="section-count" id="soonCount">7 roadmaps</span>
+      </div>
+
+      <div class="roadmaps-grid" id="soonGrid">
+
+        <!-- NETWORKING -->
+        <div class="rm-card locked" style="--card-color:#00d4ff" data-cat="networking">
+          <div class="rm-card-top">
+            <div class="rm-icon" style="border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.05)">📡</div>
+            <div class="rm-badges">
+              <span class="rm-badge badge-soon">⧗ Coming Soon</span>
+            </div>
+          </div>
+          <div>
+            <div class="rm-cat" style="color:#00d4ff">Networking</div>
+            <div class="rm-title">Networking Fundamentals</div>
+          </div>
+          <p class="rm-desc">
+            From OSI model to advanced routing. Covers TCP/IP, DNS, DHCP, VLANs,
+            subnetting, firewalls, packet analysis with Wireshark, and network
+            security fundamentals.
+          </p>
+          <div class="rm-tags">
+            <span class="rm-tag">TCP/IP</span>
+            <span class="rm-tag">Wireshark</span>
+            <span class="rm-tag">Cisco</span>
+            <span class="rm-tag">Subnetting</span>
+            <span class="rm-tag">Firewalls</span>
+          </div>
+          <div class="rm-stats">
+            <div class="rm-stat"><span class="rm-stat-num">6</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~48</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~80h</span><span class="rm-stat-lbl">Estimated</span></div>
+          </div>
+          <div class="rm-cta">
+            <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
+            <button class="rm-notify" onclick="notify('Networking')">🔔 Notify me</button>
+          </div>
+        </div>
+
+        <!-- OSINT / INTELLIGENCE -->
+        <div class="rm-card locked" style="--card-color:#a855f7" data-cat="intelligence">
+          <div class="rm-card-top">
+            <div class="rm-icon" style="border-color:rgba(168,85,247,.3);background:rgba(168,85,247,.05)">🕵</div>
+            <div class="rm-badges">
+              <span class="rm-badge badge-soon">⧗ Coming Soon</span>
+            </div>
+          </div>
+          <div>
+            <div class="rm-cat" style="color:#a855f7">Intelligence</div>
+            <div class="rm-title">OSINT & Information Intelligence</div>
+          </div>
+          <p class="rm-desc">
+            Open-source intelligence gathering, GEOINT, SOCMINT, and HUMINT techniques.
+            Covers Maltego, Shodan, Google Dorking, dark web research, and building
+            intelligence reports.
+          </p>
+          <div class="rm-tags">
+            <span class="rm-tag">OSINT</span>
+            <span class="rm-tag">Maltego</span>
+            <span class="rm-tag">Shodan</span>
+            <span class="rm-tag">GEOINT</span>
+            <span class="rm-tag">SOCMINT</span>
+          </div>
+          <div class="rm-stats">
+            <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~36</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~60h</span><span class="rm-stat-lbl">Estimated</span></div>
+          </div>
+          <div class="rm-cta">
+            <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
+            <button class="rm-notify" onclick="notify('OSINT & Intelligence')">🔔 Notify me</button>
+          </div>
+        </div>
+
+        <!-- OT/SCADA -->
+        <div class="rm-card locked" style="--card-color:#ff6eb4" data-cat="industrial">
+          <div class="rm-card-top">
+            <div class="rm-icon" style="border-color:rgba(255,110,180,.3);background:rgba(255,110,180,.05)">⚙</div>
+            <div class="rm-badges">
+              <span class="rm-badge badge-soon">⧗ Coming Soon</span>
+            </div>
+          </div>
+          <div>
+            <div class="rm-cat" style="color:#ff6eb4">Industrial Security</div>
+            <div class="rm-title">OT / SCADA Security</div>
+          </div>
+          <p class="rm-desc">
+            Operational Technology and Industrial Control Systems security. Modbus,
+            DNP3, ICS protocols, PLCs, HMIs, SCADA architecture, and attacking/defending
+            industrial environments.
+          </p>
+          <div class="rm-tags">
+            <span class="rm-tag">SCADA</span>
+            <span class="rm-tag">ICS</span>
+            <span class="rm-tag">Modbus</span>
+            <span class="rm-tag">DNP3</span>
+            <span class="rm-tag">PLC</span>
+          </div>
+          <div class="rm-stats">
+            <div class="rm-stat"><span class="rm-stat-num">4</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~32</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~70h</span><span class="rm-stat-lbl">Estimated</span></div>
+          </div>
+          <div class="rm-cta">
+            <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
+            <button class="rm-notify" onclick="notify('OT/SCADA')">🔔 Notify me</button>
+          </div>
+        </div>
+
+        <!-- PROGRAMMING FOR HACKERS -->
+        <div class="rm-card locked" style="--card-color:#00e5a0" data-cat="programming">
+          <div class="rm-card-top">
+            <div class="rm-icon" style="border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.05)">⌨</div>
+            <div class="rm-badges">
+              <span class="rm-badge badge-soon">⧗ Coming Soon</span>
+            </div>
+          </div>
+          <div>
+            <div class="rm-cat" style="color:#00e5a0">Programming</div>
+            <div class="rm-title">Programming for Hackers</div>
+          </div>
+          <p class="rm-desc">
+            Python, Bash, and C from a hacker's perspective. Automate recon,
+            write custom exploits, build tools, script Burp extensions, and
+            understand assembly for reverse engineering.
+          </p>
+          <div class="rm-tags">
+            <span class="rm-tag">Python</span>
+            <span class="rm-tag">Bash</span>
+            <span class="rm-tag">C / C++</span>
+            <span class="rm-tag">Scripting</span>
+            <span class="rm-tag">Assembly</span>
+          </div>
+          <div class="rm-stats">
+            <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~50</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~100h</span><span class="rm-stat-lbl">Estimated</span></div>
+          </div>
+          <div class="rm-cta">
+            <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
+            <button class="rm-notify" onclick="notify('Programming for Hackers')">🔔 Notify me</button>
+          </div>
+        </div>
+
+        <!-- CLOUD SECURITY -->
+        <div class="rm-card locked" style="--card-color:#ffaa00" data-cat="security">
+          <div class="rm-card-top">
+            <div class="rm-icon" style="border-color:rgba(255,170,0,.3);background:rgba(255,170,0,.05)">☁</div>
+            <div class="rm-badges">
+              <span class="rm-badge badge-soon">⧗ Coming Soon</span>
+            </div>
+          </div>
+          <div>
+            <div class="rm-cat" style="color:#ffaa00">Security</div>
+            <div class="rm-title">Cloud Security</div>
+          </div>
+          <p class="rm-desc">
+            AWS, Azure, and GCP attack and defence. IAM misconfigurations, S3 bucket
+            takeovers, serverless exploitation, container escapes, and cloud-native
+            security tooling.
+          </p>
+          <div class="rm-tags">
+            <span class="rm-tag">AWS</span>
+            <span class="rm-tag">Azure</span>
+            <span class="rm-tag">GCP</span>
+            <span class="rm-tag">IAM</span>
+            <span class="rm-tag">Containers</span>
+          </div>
+          <div class="rm-stats">
+            <div class="rm-stat"><span class="rm-stat-num">4</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~38</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~90h</span><span class="rm-stat-lbl">Estimated</span></div>
+          </div>
+          <div class="rm-cta">
+            <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
+            <button class="rm-notify" onclick="notify('Cloud Security')">🔔 Notify me</button>
+          </div>
+        </div>
+
+        <!-- MALWARE ANALYSIS -->
+        <div class="rm-card locked" style="--card-color:#ff2244" data-cat="security">
+          <div class="rm-card-top">
+            <div class="rm-icon" style="border-color:rgba(255,34,68,.3);background:rgba(255,34,68,.05)">🦠</div>
+            <div class="rm-badges">
+              <span class="rm-badge badge-soon">⧗ Coming Soon</span>
+            </div>
+          </div>
+          <div>
+            <div class="rm-cat" style="color:#ff2244">Security</div>
+            <div class="rm-title">Malware Analysis & Reverse Engineering</div>
+          </div>
+          <p class="rm-desc">
+            Static and dynamic malware analysis, sandbox environments, Ghidra/IDA Pro,
+            unpacking, deobfuscation, and writing detection rules (YARA, Sigma).
+          </p>
+          <div class="rm-tags">
+            <span class="rm-tag">Ghidra</span>
+            <span class="rm-tag">IDA Pro</span>
+            <span class="rm-tag">YARA</span>
+            <span class="rm-tag">Sandbox</span>
+            <span class="rm-tag">RE</span>
+          </div>
+          <div class="rm-stats">
+            <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~44</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~110h</span><span class="rm-stat-lbl">Estimated</span></div>
+          </div>
+          <div class="rm-cta">
+            <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
+            <button class="rm-notify" onclick="notify('Malware Analysis')">🔔 Notify me</button>
+          </div>
+        </div>
+
+        <!-- DEFENSIVE / BLUE TEAM -->
+        <div class="rm-card locked" style="--card-color:#7eb3ff" data-cat="security">
+          <div class="rm-card-top">
+            <div class="rm-icon" style="border-color:rgba(126,179,255,.3);background:rgba(126,179,255,.05)">🛡</div>
+            <div class="rm-badges">
+              <span class="rm-badge badge-soon">⧗ Coming Soon</span>
+            </div>
+          </div>
+          <div>
+            <div class="rm-cat" style="color:#7eb3ff">Blue Team</div>
+            <div class="rm-title">Defensive Security & SOC Operations</div>
+          </div>
+          <p class="rm-desc">
+            Threat detection, incident response, SIEM operations (Splunk, Elastic),
+            log analysis, threat hunting, digital forensics, and building detection
+            rules for real-world attacks.
+          </p>
+          <div class="rm-tags">
+            <span class="rm-tag">SIEM</span>
+            <span class="rm-tag">Splunk</span>
+            <span class="rm-tag">Threat Hunting</span>
+            <span class="rm-tag">DFIR</span>
+            <span class="rm-tag">SOC</span>
+          </div>
+          <div class="rm-stats">
+            <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~40</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~95h</span><span class="rm-stat-lbl">Estimated</span></div>
+          </div>
+          <div class="rm-cta">
+            <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
+            <button class="rm-notify" onclick="notify('Blue Team / SOC')">🔔 Notify me</button>
+          </div>
+        </div>
+
+      </div><!-- /soonGrid -->
+    </div><!-- /coming-soon-section -->
+
+    <!-- Suggest a roadmap banner -->
+    <div class="suggest-banner">
+      <div class="sb-icon">💡</div>
+      <div class="sb-body">
+        <div class="sb-title">Want a roadmap we haven't built yet?</div>
+        <div class="sb-sub">We take community requests seriously. If enough people want a specific track, we build it. Hardware hacking, bug bounty, cryptography, mobile security — suggest it below.</div>
+      </div>
+      <a href="#" target="_blank" class="sb-cta">SUGGEST A TRACK →</a>
+    </div>
+
+  </main>
+  
+  <!-- ────────────── FOOTER ────────────── -->
+  <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-bracket"></span>CyX<span style="color:var(--acc)">_9D</span><span class="logo-bracket"></span>
+                    </a>
+                    <p class="footer-tagline">
+                        The learning &amp; Building platform.<br>
+                        Structured paths. Real techniques. Honest craft. Build better foundations.<br>
+                        root@cyx_9d:~# knowledge --is-power
+                    </p>
+                    <div class="footer-socials">
+                        <a href="" class="social-btn" title="Twitter">𝕏</a>
+                        <a href="https://github.com/Cyx3rpatriX" class="social-btn" title="GitHub">gh</a>
+                        <a href="" class="social-btn" title="Discord">dc</a>
+                        <a href="" class="social-btn" title="YouTube">yt</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Learn</div>
+                    <ul class="footer-links">
+                        <li><a href="/roadmap/">Roadmap</a></li>
+                        <li><a href="#">Web Exploitation</a></li>
+                        <li><a href="#">Network Hacking</a></li>
+                        <li><a href="#">Reverse Engineering</a></li>
+                        <li><a href="#">AI/ML Security</a></li>
+                        <li><a href="#">CTF Writeups</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <div class="footer-heading">Platform</div>
+                    <ul class="footer-links">
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="#">Tool Guides</a></li>
+                        <li><a href="#">Walkthroughs</a></li>
+                        <li><a href="#">Tips &amp; Tricks</a></li>
+                        <li><a href="/about/">About</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Account</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Progress Tracker</a></li>
+                        <li><a href="#">Bookmarks</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copy">
+                        © 2026 CyX_9D — FOR EDUCATIONAL PURPOSES ONLY // HACK, BUILD &amp; CREATE ETHICALLY, ALWAYS!
+                </div>
+                <div class="footer-legal">
+                    <a href="">Privacy</a>
+                    <a href="">Terms</a>
+                    <a href="">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+  </footer>
+  
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+  
+  <script src="../assets/js/index.js"></script>
+  <script>
+    /* ── Filter ──────────────────────────────────── */
+    document.querySelectorAll('.fb').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.fb').forEach(b => b.classList.remove('act'));
+        btn.classList.add('act');
+        const f = btn.dataset.filter;
+
+        /* Available cards */
+        const avail = document.querySelectorAll('#roadmapsGrid .rm-card');
+        let aCount = 0;
+        avail.forEach(card => {
+          const show = f==='all' || card.dataset.cat===f;
+          card.style.display = show ? '' : 'none';
+          if (show) aCount++;
+        });
+        document.getElementById('availCount').textContent = aCount + ' roadmap' + (aCount!==1?'s':'');
+
+        /* Coming soon cards */
+        const soon = document.querySelectorAll('#soonGrid .rm-card');
+        let sCount = 0;
+        soon.forEach(card => {
+          const show = f==='all' || card.dataset.cat===f;
+          card.style.display = show ? '' : 'none';
+          if (show) sCount++;
+        });
+        document.getElementById('soonCount').textContent = sCount + ' roadmap' + (sCount!==1?'s':'');
+
+        /* Hide coming-soon section if nothing visible */
+        const cs = document.querySelector('.coming-soon-section');
+        cs.style.display = sCount===0 ? 'none' : '';
+      });
+    });
+
+    /* ── Notify me ─────────────────────────────────── */
+    window.notify = (track) => {
+      const t = document.getElementById('toast');
+      t.textContent = '🔔 We\'ll notify you when ' + track + ' launches!';
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    };
+
+    /* ── Load live progress from localStorage + API ──────── */
+    (function loadProgress() {
+      try {
+        const ls = JSON.parse(localStorage.getItem('cyxlab_roadmap_v1')||'{}');
+        const count = Object.keys(ls).length;
+        const pct   = Math.round(count / 42 * 100);
+        if (count > 0) {
+          document.getElementById('ehProgress').style.display = '';
+          document.getElementById('ehPct').textContent   = pct + '%';
+          document.getElementById('ehFill').style.width  = pct + '%';
+        }
+      } catch {}
+    })();
+
+    /* ── Live stats from API ──────────────────────────── */
+    (function loadStats() {
+      const base = window.CYXLAB_API_BASE
+        || (location.hostname==='localhost'||location.hostname==='127.0.0.1'
+            ? 'http://localhost:4000' : 'https://api.cyx_9d.io');
+      fetch(base + '/api/stats')
+        .then(r => r.json())
+        .then(d => {
+          const s = d.data || d;
+          const fmt = n => n >= 1000 ? (n/1000).toFixed(1)+'k' : String(n||0);
+          const el = document.getElementById('stat-members');
+          if (el && s.members) el.textContent = fmt(s.members);
+        }).catch(() => {});
+    })();
+  </script>
+
+  <script>
+    window.CYX_9D_API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+      ? 'http://localhost:4000' : 'https://api.cyx_9d.io';
+  </script>
+
+</body>
+</html>
