@@ -27,6 +27,7 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="https://cyx3rpatrix.github.io/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="https://cyx3rpatrix.github.io/assets/images/favicon.png">
+  
   <!--
     OPTIONAL: WEB APP / PWA
     Only add manifest.json when you actually
@@ -38,7 +39,7 @@
     Recommended later when we build your
     proper SEO/structured-data layer.
   -->
-  <title>CyX_9D — Blog</title>
+  <title>CyX_9D — Roadmaps</title>
   <link rel="stylesheet" href="../assets/css/themes.css">
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -57,12 +58,12 @@
     }
     .hero-eyebrow {
       font-family:var(--mono); font-size:.6rem; color:var(--blue);
-      letter-spacing:.25em; text-transform:uppercase; margin-bottom:1rem;
+      letter-spacing:.25em; text-transform:uppercase; margin-top:1rem;
     }
     .hero-title {
-      font-family:var(--disp); font-size:clamp(1.8rem,4vw,3rem);
+      font-family:var(--serif); font-size:clamp(1.8rem,4vw,3rem);
       font-weight:900; letter-spacing:-.01em; line-height:1.05;
-      margin-bottom:1rem;
+      margin-bottom:1rem; text-shadow: var(--gb);
     }
     .hero-title em { color:var(--blue); font-style:normal; }
     .hero-sub {
@@ -375,15 +376,14 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-eyebrow">// choose your path</div>
-    <h1 class="hero-title">Learning<br><em>Roadmaps</em></h1>
+    <h1 class="hero-title">CyX_9D <br><em>Roadmaps</em></h1>
     <p class="hero-sub">
       Structured, step-by-step learning paths across cybersecurity, networking,
-      programming, and beyond. Pick a track, follow the path, level up.
+      programming, and beyond. Pick a track, follow the path.
     </p>
     <div class="hero-stats">
-      <div class="hs"><span class="hs-num" id="stat-tracks">8</span><span class="hs-lbl">// tracks</span></div>
-      <div class="hs"><span class="hs-num">200+</span><span class="hs-lbl">// lessons</span></div>
-      <div class="hs"><span class="hs-num" id="stat-members">4.2k</span><span class="hs-lbl">// learners</span></div>
+      <div class="hs"><span class="hs-num" id="stat-tracks">3</span><span class="hs-lbl">// tracks</span></div>
+      <div class="hs"><span class="hs-num">100+</span><span class="hs-lbl">// lessons</span></div>
       <div class="hs"><span class="hs-num">Free</span><span class="hs-lbl">// always</span></div>
     </div>
   </section>
@@ -425,7 +425,7 @@
         </div>
         <p class="rm-desc">
           The complete offensive security roadmap. From Linux fundamentals to
-          advanced exploit development — 5 phases, 42 structured lessons covering
+          advanced exploit development — Structured lessons covering
           every layer of the attack chain.
         </p>
         <div class="rm-tags">
@@ -436,9 +436,9 @@
           <span class="rm-tag">Exploit Dev</span>
         </div>
         <div class="rm-stats">
-          <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
-          <div class="rm-stat"><span class="rm-stat-num">42</span><span class="rm-stat-lbl">Lessons</span></div>
-          <div class="rm-stat"><span class="rm-stat-num">~120h</span><span class="rm-stat-lbl">Estimated</span></div>
+          <div class="rm-stat"><span class="rm-stat-num">45</span><span class="rm-stat-lbl">Phases</span></div>
+          <div class="rm-stat"><span class="rm-stat-num">200+</span><span class="rm-stat-lbl">Lessons</span></div>
+          <div class="rm-stat"><span class="rm-stat-num">~10d</span><span class="rm-stat-lbl">Estimated</span></div>
           <div class="rm-stat"><span class="rm-stat-num diff-adv" style="font-size:.65rem;border:1px solid rgba(255,34,68,.3);padding:.1rem .35rem">Advanced</span><span class="rm-stat-lbl">Difficulty</span></div>
         </div>
         <div class="rm-progress" id="ehProgress" style="display:none">
@@ -459,13 +459,13 @@
 
       <div class="section-hdr">
         <span class="section-title">// in development</span>
-        <span class="section-count" id="soonCount">7 roadmaps</span>
+        <span class="section-count" id="soonCount">2 roadmaps</span>
       </div>
 
       <div class="roadmaps-grid" id="soonGrid">
 
         <!-- NETWORKING -->
-        <div class="rm-card locked" style="--card-color:#00d4ff" data-cat="networking">
+       <!-- <div class="rm-card locked" style="--card-color:#00d4ff" data-cat="networking">
           <div class="rm-card-top">
             <div class="rm-icon" style="border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.05)">📡</div>
             <div class="rm-badges">
@@ -497,7 +497,7 @@
             <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
             <button class="rm-notify" onclick="notify('Networking')">🔔 Notify me</button>
           </div>
-        </div>
+        </div>-->
 
         <!-- OSINT / INTELLIGENCE -->
         <div class="rm-card locked" style="--card-color:#a855f7" data-cat="intelligence">
@@ -524,9 +524,9 @@
             <span class="rm-tag">SOCMINT</span>
           </div>
           <div class="rm-stats">
-            <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
-            <div class="rm-stat"><span class="rm-stat-num">~36</span><span class="rm-stat-lbl">Lessons</span></div>
-            <div class="rm-stat"><span class="rm-stat-num">~60h</span><span class="rm-stat-lbl">Estimated</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">20</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~200+</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~10d</span><span class="rm-stat-lbl">Estimated</span></div>
           </div>
           <div class="rm-cta">
             <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
@@ -535,7 +535,7 @@
         </div>
 
         <!-- OT/SCADA -->
-        <div class="rm-card locked" style="--card-color:#ff6eb4" data-cat="industrial">
+        <!--<div class="rm-card locked" style="--card-color:#ff6eb4" data-cat="industrial">
           <div class="rm-card-top">
             <div class="rm-icon" style="border-color:rgba(255,110,180,.3);background:rgba(255,110,180,.05)">⚙</div>
             <div class="rm-badges">
@@ -567,7 +567,7 @@
             <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
             <button class="rm-notify" onclick="notify('OT/SCADA')">🔔 Notify me</button>
           </div>
-        </div>
+        </div>-->
 
         <!-- PROGRAMMING FOR HACKERS -->
         <div class="rm-card locked" style="--card-color:#00e5a0" data-cat="programming">
@@ -579,12 +579,11 @@
           </div>
           <div>
             <div class="rm-cat" style="color:#00e5a0">Programming</div>
-            <div class="rm-title">Programming for Hackers</div>
+            <div class="rm-title">Programming</div>
           </div>
           <p class="rm-desc">
-            Python, Bash, and C from a hacker's perspective. Automate recon,
-            write custom exploits, build tools, script Burp extensions, and
-            understand assembly for reverse engineering.
+            Master Programming itself—the concepts, mental models, abstractions, problem-solving methods, algorithms, architecture, and computational thinking that remain applicable regardless of language.
+            
           </p>
           <div class="rm-tags">
             <span class="rm-tag">Python</span>
@@ -592,11 +591,12 @@
             <span class="rm-tag">C / C++</span>
             <span class="rm-tag">Scripting</span>
             <span class="rm-tag">Assembly</span>
+            <span class="rm-tag">Pseudo Codes</span>
           </div>
           <div class="rm-stats">
-            <div class="rm-stat"><span class="rm-stat-num">5</span><span class="rm-stat-lbl">Phases</span></div>
-            <div class="rm-stat"><span class="rm-stat-num">~50</span><span class="rm-stat-lbl">Lessons</span></div>
-            <div class="rm-stat"><span class="rm-stat-num">~100h</span><span class="rm-stat-lbl">Estimated</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">30</span><span class="rm-stat-lbl">Phases</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~200+</span><span class="rm-stat-lbl">Lessons</span></div>
+            <div class="rm-stat"><span class="rm-stat-num">~10d</span><span class="rm-stat-lbl">Estimated</span></div>
           </div>
           <div class="rm-cta">
             <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
@@ -605,7 +605,7 @@
         </div>
 
         <!-- CLOUD SECURITY -->
-        <div class="rm-card locked" style="--card-color:#ffaa00" data-cat="security">
+        <!--<div class="rm-card locked" style="--card-color:#ffaa00" data-cat="security">
           <div class="rm-card-top">
             <div class="rm-icon" style="border-color:rgba(255,170,0,.3);background:rgba(255,170,0,.05)">☁</div>
             <div class="rm-badges">
@@ -637,10 +637,10 @@
             <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
             <button class="rm-notify" onclick="notify('Cloud Security')">🔔 Notify me</button>
           </div>
-        </div>
+        </div>-->
 
         <!-- MALWARE ANALYSIS -->
-        <div class="rm-card locked" style="--card-color:#ff2244" data-cat="security">
+        <!--<div class="rm-card locked" style="--card-color:#ff2244" data-cat="security">
           <div class="rm-card-top">
             <div class="rm-icon" style="border-color:rgba(255,34,68,.3);background:rgba(255,34,68,.05)">🦠</div>
             <div class="rm-badges">
@@ -671,10 +671,10 @@
             <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
             <button class="rm-notify" onclick="notify('Malware Analysis')">🔔 Notify me</button>
           </div>
-        </div>
+        </div>-->
 
         <!-- DEFENSIVE / BLUE TEAM -->
-        <div class="rm-card locked" style="--card-color:#7eb3ff" data-cat="security">
+        <!--<div class="rm-card locked" style="--card-color:#7eb3ff" data-cat="security">
           <div class="rm-card-top">
             <div class="rm-icon" style="border-color:rgba(126,179,255,.3);background:rgba(126,179,255,.05)">🛡</div>
             <div class="rm-badges">
@@ -706,7 +706,7 @@
             <button class="rm-btn rm-btn-locked" disabled>COMING SOON</button>
             <button class="rm-notify" onclick="notify('Blue Team / SOC')">🔔 Notify me</button>
           </div>
-        </div>
+        </div>-->
 
       </div><!-- /soonGrid -->
     </div><!-- /coming-soon-section -->
@@ -772,7 +772,6 @@
                     <ul class="footer-links">
                         <li><a href="#">Sign Up</a></li>
                         <li><a href="#">Login</a></li>
-                        <li><a href="#">Progress Tracker</a></li>
                         <li><a href="#">Bookmarks</a></li>
                         <li><a href="#">Community</a></li>
                     </ul>
