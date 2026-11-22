@@ -1103,7 +1103,7 @@
   <script>
     /* ── POST DATA ─────────────────────────────────── */
     const POSTS = [
-      { id:1,  cat:'guides',     date:'May 29, 2026', title:'The Zero-to-Mastery Problem: Why Most People Never Truly Learn',        excerpt:'Information is everywhere. Understanding isn\'t. Discover why most people never move beyond consuming knowledge and what it really takes to transform information into understanding, capability, and mastery.',          tags:['GUIDES','TIPS','STUDY','MASTERY'],         author:'Cyx3rpatriX', time:'12 min', views:13, col:'var(--wht)' },
+      { id:1,  cat:'guides',     date:'May 29, 2026', title:'The Zero-to-Mastery Problem: Why Most People Never Truly Learn',        excerpt:'Information is everywhere. Understanding isn\'t. Discover why most people never move beyond consuming knowledge and what it really takes to transform information into understanding, capability, and mastery.', link:'./zero-to-mastery.html',       tags:['GUIDES','TIPS','STUDY','MASTERY'],         author:'Cyx3rpatriX', time:'12 min', views:13, col:'var(--wht)' },
      /* { id:1,  cat:'web',     date:'May 29, 2026', title:'Chaining SSRF + XXE to Achieve Full AWS Metadata Exfiltration',        excerpt:'How a blind redirect endpoint and a misconfigured XML parser combine into a critical-severity attack chain yielding live IAM credentials.',          tags:['SSRF','XXE','AWS','Cloud'],         author:'hackpath', time:'12 min', views:9200, col:'var(--acc)' },
       { id:2,  cat:'ctf',     date:'May 27, 2026', title:'HTB: Unrested — Full Walkthrough from Foothold to Root',               excerpt:'Zabbix API user enumeration, MySQL UDF privilege escalation, and post-exploitation on a Linux target. Every step documented.',                    tags:['HackTheBox','CTF','Linux','SQLi'],  author:'r3con',    time:'8 min',  views:5700, col:'var(--pnk)' },
       { id:3,  cat:'aiml',    date:'May 24, 2026', title:'Breaking LLM Guardrails: A Systematic Approach to Prompt Injection',   excerpt:'A structured taxonomy of prompt injection attacks against deployed AI systems — from naive role confusion to nested context manipulation.',           tags:['LLM','Prompt Injection','AI'],      author:'n0de',     time:'10 min', views:6100, col:'var(--pur)' },
@@ -1188,7 +1188,7 @@
         const lbl = CAT_LBL[p.cat] || p.cat.toUpperCase();
         if (viewMode === 'list') {
           return `
-            <div class="post-card rev" style="--pc-col:${col};animation-delay:${i*0.04}s">
+            <a href="${p.link}" class="post-card rev" style="--pc-col:${col};animation-delay:${i*0.04}s">
               <div class="list-num">${String(i+1).padStart(2,'0')}</div>
               <div class="list-body">
                 <div class="post-meta">
@@ -1207,11 +1207,11 @@
                   <span class="ptime">${p.time} read · ${(p.views/1000).toFixed(1)}k views</span>
                 </div>
               </div>
-            </div>
+            </a>
           `;
         }
         return `
-          <div class="post-card rev" style="--pc-col:${col};animation-delay:${i*0.05}s">
+          <a href="${p.link}" class="post-card rev" style="--pc-col:${col};animation-delay:${i*0.05}s">
             <div class="post-meta">
               <span class="cat-badge ${cls}">${lbl}</span>
               <span class="post-date">${p.date}</span>
@@ -1228,7 +1228,7 @@
               </div>
               <span class="ptime">${p.time} · ${(p.views/1000).toFixed(1)}k views</span>
             </div>
-          </div>
+          </a>
         `;
       }).join('');
 
